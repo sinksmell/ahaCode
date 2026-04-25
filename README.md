@@ -61,6 +61,20 @@ Your snippets live as plain `.md` files on disk with YAML frontmatter. The data 
 ### Custom themes
 Customize the app UI and editor syntax highlighting with JSON theme files. Supports light and dark themes with live reload.
 
+### AI integration via MCP + local RAG
+ahaCode ships an in-process [Model Context Protocol](https://modelcontextprotocol.io) server so AI assistants (Claude Desktop, Cursor, Continue, Zed, etc.) can read from and write to your snippet library directly. Two tools are exposed over JSON-RPC:
+
+- **`ingest_snippet`** — create a snippet (name, folder, one or more labelled language/value fragments). The new snippet is automatically embedded and added to the RAG index.
+- **`rag_query`** — ask "do I have something like X?" and get the top-K most relevant snippets back, ranked by semantic similarity — not just substring match.
+
+The RAG stack is **100% local** — no API keys, no data leaves the machine:
+
+- **Embeddings**: [`Xenova/bge-small-en-v1.5`](https://huggingface.co/Xenova/bge-small-en-v1.5) runs on-device via [`@huggingface/transformers`](https://github.com/huggingface/transformers.js). First query warms the model (~30 MB); subsequent queries are ~tens of ms.
+- **Vector store**: [`sqlite-vec`](https://github.com/asg017/sqlite-vec) — cosine similarity k-NN over an embedded SQLite database. No external service, no network round-trip.
+- **Live index**: every snippet create / update / delete syncs to the RAG index automatically, so what you query is always in sync with what you see.
+
+Practical effect: your coding agent can search your private snippet library the way it searches the web, with zero latency and zero data exposure.
+
 ---
 
 ## Build from source
