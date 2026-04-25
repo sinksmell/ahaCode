@@ -11,6 +11,9 @@ on:
         required: true
         default: v0.1.0
 
+permissions:
+  contents: write
+
 jobs:
   build:
     name: Build for ${{ matrix.os }}
@@ -60,14 +63,10 @@ jobs:
       - name: Build application (macOS)
         if: matrix.platform == 'mac'
         run: pnpm run build:${{ matrix.platform }}:${{ matrix.arch }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build application (other platforms)
         if: matrix.platform != 'mac'
         run: pnpm run build:${{ matrix.platform }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
