@@ -75,6 +75,63 @@ The RAG stack is **100% local** — no API keys, no data leaves the machine:
 
 Practical effect: your coding agent can search your private snippet library the way it searches the web, with zero latency and zero data exposure.
 
+#### Connecting your MCP client
+
+The server listens on `http://127.0.0.1:4322/` by default (change it under **Preferences → API → MCP port**). The app must be running for clients to connect.
+
+**Claude Desktop** — `~/Library/Application Support/Claude/claude_desktop_config.json` (macOS) / `%APPDATA%\Claude\claude_desktop_config.json` (Windows):
+```json
+{
+  "mcpServers": {
+    "ahaCode": {
+      "url": "http://127.0.0.1:4322/"
+    }
+  }
+}
+```
+
+**Cursor** — Settings → MCP, or `~/.cursor/mcp.json`:
+```json
+{
+  "mcpServers": {
+    "ahaCode": {
+      "url": "http://127.0.0.1:4322/"
+    }
+  }
+}
+```
+
+**Claude Code / Codex CLI** — add to your project's `.mcp.json` or the global config:
+```json
+{
+  "mcpServers": {
+    "ahaCode": {
+      "type": "http",
+      "url": "http://127.0.0.1:4322/"
+    }
+  }
+}
+```
+
+**Zed** — `settings.json`:
+```json
+{
+  "context_servers": {
+    "ahaCode": {
+      "source": "custom",
+      "url": "http://127.0.0.1:4322/"
+    }
+  }
+}
+```
+
+After saving the config, restart the client. You should see the `ingest_snippet` and `rag_query` tools become available. Quick sanity-check from a shell:
+```bash
+curl -s http://127.0.0.1:4322/ \
+  -H 'content-type: application/json' \
+  -d '{"jsonrpc":"2.0","id":1,"method":"tools/list"}'
+```
+
 ---
 
 ## Build from source
