@@ -1,0 +1,155 @@
+{
+  "common": {
+    "total": "Toplam",
+    "inbox": "Gelen Kutusu",
+    "favorites": "Favoriler",
+    "trash": "Çöp Kutusu",
+    "folders": "Klasörler",
+    "tags": "Etiketler",
+    "library": "Kütüphane",
+    "fragment": "Fragment"
+  },
+  "spaces": {
+    "label": "Spaces",
+    "code": {
+      "label": "Code",
+      "tooltip": "Code snippets",
+      "title": "Code Snippets",
+      "allSnippets": "Tüm Snippet'ler"
+    },
+    "notes": {
+      "label": "Notes",
+      "tooltip": "Notes",
+      "title": "Notes",
+      "allNotes": "All Notes"
+    },
+    "math": {
+      "label": "Math",
+      "tooltip": "Math notebook",
+      "title": "Math Notebook",
+      "sheetList": "Sheet List",
+      "newSheet": "New Sheet",
+      "untitled": "Untitled",
+      "currencyUnavailable": "Currency rates service unavailable"
+    },
+    "tools": {
+      "label": "Tools",
+      "tooltip": "Developer tools"
+    }
+  },
+  "snippet": {
+    "untitled": "İsimsiz snippet",
+    "selectedMultiple": "{{count}} Snippet Seçildi",
+    "noSelected": "Snippet Seçilmedi"
+  },
+  "notes": {
+    "untitled": "Untitled note",
+    "plural": "Notes",
+    "words": "Words",
+    "symbols": "Symbols",
+    "selectedMultiple": "{{count}} Notes Selected",
+    "noSelected": "No Note Selected"
+  },
+  "folder": {
+    "untitled": "İsimsiz klasör"
+  },
+  "button": {
+    "back": "Geri",
+    "cancel": "İptal",
+    "confirm": "Onayla",
+    "copy": "Kopyala",
+    "fit": "Sığdır",
+    "saveAs": "Farklı Kaydet",
+    "update": [
+      "GitHub'a Git",
+      "Tamam"
+    ],
+    "zoomIn": "Yakınlaştır",
+    "zoomOut": "Uzaklaştır",
+    "darkMode": "Karanlık Mod",
+    "toggleDarkMode": "Karanlık modu değiştir",
+    "background": "Arka Plan",
+    "goToDownload": "İndirmeye Git",
+    "goToSettings": "Go to Settings",
+    "refreshPreview": "Önizlemeyi yenile",
+    "laserPointer": "Lazer işaretçi",
+    "fullscreen": "Tam ekran",
+    "prev": "Önceki",
+    "next": "Sonraki"
+  },
+  "action": {
+    "close": "Kapat",
+    "defaultLanguage": "Varsayılan Dil",
+    "duplicate": "Çoğalt",
+    "rename": "Yeniden Adlandır",
+    "restore": "Geri Yükle",
+    "setCustomIcon": "İkon Ayarla",
+    "removeCustomIcon": "İkonu Kaldır",
+    "show": "Göster",
+    "hide": "Gizle",
+    "showSidebar": "Kenar Çubuğunu Göster",
+    "hideSidebar": "Kenar Çubuğunu Gizle",
+    "showSidebarAndList": "Show Sidebar and List",
+    "hideSidebarAndList": "Hide Sidebar and List",
+    "new": {
+      "storage": "Yeni Depolama",
+      "folder": "Yeni Klasör",
+      "snippet": "Yeni Snippet",
+      "fragment": "Yeni Fragment",
+      "note": "New Note"
+    },
+    "add": {
+      "description": "Açıklama Ekle",
+      "tag": "Etiket Ekle",
+      "toFavorites": "Favorilere Ekle"
+    },
+    "open": {
+      "storage": "Depolama Aç"
+    },
+    "move": {
+      "storage": "Depolamayı Taşı",
+      "toTrash": "Çöp Kutusuna Taşı"
+    },
+    "remove": {
+      "fromFavorites": "Favorilerden Kaldır"
+    },
+    "reveal": {
+      "inFinder": "Reveal in Finder",
+      "inFileManager": "Show in File Manager"
+    },
+    "reload": {
+      "storage": "Depolamayı Yenile",
+      "app": "Reload ahaCode"
+    },
+    "delete": {
+      "common": "Sil",
+      "now": "Şimdi Sil",
+      "allData": "Tüm Verileri Sil",
+      "trash": "Çöp Kutusunu Boşalt"
+    },
+    "migrate": {
+      "fromSnippetsLab": "SnippetsLab'den",
+      "fromV3": "massCode v3'ten"
+    },
+    "export": {
+      "toHtml": "HTML Olarak Dışa Aktar"
+    },
+    "copy": {
+      "snippetLink": "Snippet Bağlantısını Kopyala"
+    },
+    "select": {
+      "directory": "Select Directory"
+    }
+  },
+  "placeholder": {
+    "emptyTagList": "Burada görmek için snippet'lere etiket ekleyin",
+    "emptyNotesTagList": "Add tags to notes to see them here",
+    "emptyFoldersList": "Klasör yok",
+    "emptySnippetsList": "Snippet yok",
+    "emptyNotesList": "No Notes",
+    "searchNotes": "Search notes...",
+    "emptySheetList": "No Sheets",
+    "search": "Ara",
+    "addTag": "Etiket Ekle"
+  }
+}

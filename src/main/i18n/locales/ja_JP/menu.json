@@ -1,0 +1,95 @@
+{
+  "app": {
+    "label": "ahaCode",
+    "preferences": "環境設定",
+    "devtools": "開発者ツール",
+    "update": "アップデートを確認...",
+    "quit": "ahaCodeを終了",
+    "about": "ahaCodeについて",
+    "hide": "ahaCodeを隠す",
+    "mathNotebook": "Math Notebook"
+  },
+  "help": {
+    "label": "ヘルプ",
+    "website": "ウェブサイト",
+    "documentation": "ドキュメント",
+    "viewInGitHub": "GitHubで表示",
+    "changeLog": "変更履歴",
+    "reportIssue": "問題を報告",
+    "giveStar": "スターを付ける",
+    "extension": {
+      "vscode": "VS Code拡張機能",
+      "raycast": "Raycast拡張機能",
+      "alfred": "Alfred拡張機能"
+    },
+    "donate": {
+      "openCollective": "Open Collectiveで寄付",
+      "payPal": "PayPalで寄付",
+      "gumroad": "Gumroadで寄付（Visa、Mastercard等）"
+    },
+    "twitter": "X",
+    "devTools": "開発者ツールの切り替え",
+    "links": {
+      "snippets": "スニペットコレクション"
+    }
+  },
+  "view": {
+    "label": "表示",
+    "showSidebar": "サイドバーの表示/非表示",
+    "sortBy": {
+      "label": "スニペットの並び替え",
+      "dateModified": "更新日時",
+      "dateCreated": "作成日時",
+      "name": "名前"
+    },
+    "compactMode": "コンパクトモード",
+    "layout": {
+      "label": "Layout",
+      "allPanels": "All Panels",
+      "listEditor": "List + Editor",
+      "editorOnly": "Editor Only"
+    }
+  },
+  "edit": {
+    "label": "編集",
+    "find": "検索"
+  },
+  "editor": {
+    "label": "エディタ",
+    "copy": "スニペットをクリップボードにコピー",
+    "format": "フォーマット",
+    "previewCode": "コードのプレビュー",
+    "previewScreenshot": "スクリーンショットのプレビュー",
+    "previewJson": "JSON プレビュー",
+    "fontSizeIncrease": "フォントサイズを大きく",
+    "fontSizeDecrease": "フォントサイズを小さく",
+    "fontSizeReset": "フォントサイズをリセット",
+    "mode": "Mode",
+    "modeRaw": "Raw",
+    "modeLivePreview": "Live Preview",
+    "modePreview": "Preview"
+  },
+  "markdown": {
+    "label": "Markdown",
+    "preview": "プレビュー",
+    "previewMarkdown": "Markdownのプレビュー",
+    "presentationMode": "プレゼンテーションモード",
+    "previewMindmap": "マインドマップのプレビュー"
+  },
+  "history": {
+    "label": "履歴",
+    "back": "戻る",
+    "forward": "進む"
+  },
+  "devtools": {
+    "label": "開発者ツール"
+  },
+  "window": {
+    "label": "Window",
+    "minimize": "Minimize"
+  },
+  "file": {
+    "label": "File",
+    "new": "New"
+  }
+}

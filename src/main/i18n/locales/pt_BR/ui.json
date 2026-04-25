@@ -1,0 +1,155 @@
+{
+  "common": {
+    "total": "Total",
+    "inbox": "Caixa de Entrada",
+    "favorites": "Favoritos",
+    "trash": "Lixeira",
+    "folders": "Pastas",
+    "tags": "Tags",
+    "library": "Biblioteca",
+    "fragment": "Fragment"
+  },
+  "spaces": {
+    "label": "Spaces",
+    "code": {
+      "label": "Code",
+      "tooltip": "Code snippets",
+      "title": "Code Snippets",
+      "allSnippets": "Todos os Snippets"
+    },
+    "notes": {
+      "label": "Notes",
+      "tooltip": "Notes",
+      "title": "Notes",
+      "allNotes": "All Notes"
+    },
+    "math": {
+      "label": "Math",
+      "tooltip": "Math notebook",
+      "title": "Math Notebook",
+      "sheetList": "Sheet List",
+      "newSheet": "New Sheet",
+      "untitled": "Untitled",
+      "currencyUnavailable": "Currency rates service unavailable"
+    },
+    "tools": {
+      "label": "Tools",
+      "tooltip": "Developer tools"
+    }
+  },
+  "snippet": {
+    "untitled": "Snippet sem título",
+    "selectedMultiple": "{{count}} Snippets Selecionados",
+    "noSelected": "Nenhum Snippet Selecionado"
+  },
+  "notes": {
+    "untitled": "Untitled note",
+    "plural": "Notes",
+    "words": "Words",
+    "symbols": "Symbols",
+    "selectedMultiple": "{{count}} Notes Selected",
+    "noSelected": "No Note Selected"
+  },
+  "folder": {
+    "untitled": "Pasta sem título"
+  },
+  "button": {
+    "back": "Voltar",
+    "cancel": "Cancelar",
+    "confirm": "Confirmar",
+    "copy": "Copiar",
+    "fit": "Ajustar",
+    "saveAs": "Salvar como",
+    "update": [
+      "Ir para GitHub",
+      "OK"
+    ],
+    "zoomIn": "Aumentar Zoom",
+    "zoomOut": "Diminuir Zoom",
+    "darkMode": "Modo Escuro",
+    "toggleDarkMode": "Alternar modo escuro",
+    "background": "Plano de Fundo",
+    "goToDownload": "Ir para Download",
+    "goToSettings": "Go to Settings",
+    "refreshPreview": "Atualizar visualização",
+    "laserPointer": "Ponteiro laser",
+    "fullscreen": "Tela cheia",
+    "prev": "Anterior",
+    "next": "Próximo"
+  },
+  "action": {
+    "close": "Fechar",
+    "defaultLanguage": "Linguagem Padrão",
+    "duplicate": "Duplicar",
+    "rename": "Renomear",
+    "restore": "Restaurar",
+    "setCustomIcon": "Definir Ícone",
+    "removeCustomIcon": "Remover Ícone",
+    "show": "Mostrar",
+    "hide": "Ocultar",
+    "showSidebar": "Mostrar barra lateral",
+    "hideSidebar": "Ocultar barra lateral",
+    "showSidebarAndList": "Show Sidebar and List",
+    "hideSidebarAndList": "Hide Sidebar and List",
+    "new": {
+      "storage": "Novo Storage",
+      "folder": "Nova Pasta",
+      "snippet": "Novo Snippet",
+      "fragment": "Novo Fragment",
+      "note": "New Note"
+    },
+    "add": {
+      "description": "Adicionar Descrição",
+      "tag": "Adicionar Tag",
+      "toFavorites": "Adicionar aos Favoritos"
+    },
+    "open": {
+      "storage": "Abrir Storage"
+    },
+    "move": {
+      "storage": "Mover Storage",
+      "toTrash": "Mover para Lixeira"
+    },
+    "remove": {
+      "fromFavorites": "Remover dos Favoritos"
+    },
+    "reveal": {
+      "inFinder": "Reveal in Finder",
+      "inFileManager": "Show in File Manager"
+    },
+    "reload": {
+      "storage": "Recarregar Storage",
+      "app": "Reload ahaCode"
+    },
+    "delete": {
+      "common": "Excluir",
+      "now": "Excluir Agora",
+      "allData": "Excluir Todos os Dados",
+      "trash": "Esvaziar Lixeira"
+    },
+    "migrate": {
+      "fromSnippetsLab": "Do SnippetsLab",
+      "fromV3": "Do massCode v3"
+    },
+    "export": {
+      "toHtml": "Exportar para HTML"
+    },
+    "copy": {
+      "snippetLink": "Copiar Link do Snippet"
+    },
+    "select": {
+      "directory": "Select Directory"
+    }
+  },
+  "placeholder": {
+    "emptyTagList": "Adicione tags aos snippets para vê-las aqui",
+    "emptyNotesTagList": "Add tags to notes to see them here",
+    "emptyFoldersList": "Sem pastas",
+    "emptySnippetsList": "Sem snippets",
+    "emptyNotesList": "No Notes",
+    "searchNotes": "Search notes...",
+    "emptySheetList": "No Sheets",
+    "search": "Pesquisar",
+    "addTag": "Adicionar Tag"
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "app": {
+    "label": "ahaCode",
+    "preferences": "Preferencias",
+    "devtools": "Herramientas de Desarrollo",
+    "update": "Buscar Actualizaciones...",
+    "quit": "Salir de ahaCode",
+    "about": "Acerca de ahaCode",
+    "hide": "Ocultar ahaCode",
+    "mathNotebook": "Math Notebook"
+  },
+  "help": {
+    "label": "Ayuda",
+    "website": "Sitio Web",
+    "documentation": "Documentación",
+    "viewInGitHub": "Ver en GitHub",
+    "changeLog": "Registro de Cambios",
+    "reportIssue": "Reportar Problema",
+    "giveStar": "Dar una Estrella",
+    "extension": {
+      "vscode": "Extensión VS Code",
+      "raycast": "Extensión Raycast",
+      "alfred": "Extensión Alfred"
+    },
+    "donate": {
+      "openCollective": "Donar en Open Collective",
+      "payPal": "Donar vía PayPal",
+      "gumroad": "Donar vía Gumroad (Visa, Mastercard, etc.)"
+    },
+    "twitter": "X",
+    "devTools": "Alternar Herramientas de Desarrollo",
+    "links": {
+      "snippets": "Colección de Snippets"
+    }
+  },
+  "view": {
+    "label": "Vista",
+    "showSidebar": "Mostrar/ocultar barra lateral",
+    "sortBy": {
+      "label": "Ordenar Snippets Por",
+      "dateModified": "Fecha de Modificación",
+      "dateCreated": "Fecha de Creación",
+      "name": "Nombre"
+    },
+    "compactMode": "Modo Compacto",
+    "layout": {
+      "label": "Layout",
+      "allPanels": "All Panels",
+      "listEditor": "List + Editor",
+      "editorOnly": "Editor Only"
+    }
+  },
+  "edit": {
+    "label": "Editar",
+    "find": "Buscar"
+  },
+  "editor": {
+    "label": "Editor",
+    "copy": "Copiar Snippet al Portapapeles",
+    "format": "Formatear",
+    "previewCode": "Vista Previa del Código",
+    "previewScreenshot": "Vista Previa de Captura",
+    "previewJson": "Vista previa JSON",
+    "fontSizeIncrease": "Aumentar Tamaño de Fuente",
+    "fontSizeDecrease": "Disminuir Tamaño de Fuente",
+    "fontSizeReset": "Restablecer Tamaño de Fuente",
+    "mode": "Mode",
+    "modeRaw": "Raw",
+    "modeLivePreview": "Live Preview",
+    "modePreview": "Preview"
+  },
+  "markdown": {
+    "label": "Markdown",
+    "preview": "Vista Previa",
+    "previewMarkdown": "Vista Previa de Markdown",
+    "presentationMode": "Modo Presentación",
+    "previewMindmap": "Vista Previa de Mapa Mental"
+  },
+  "history": {
+    "label": "Historial",
+    "back": "Atrás",
+    "forward": "Adelante"
+  },
+  "devtools": {
+    "label": "Herramientas de Desarrollo"
+  },
+  "window": {
+    "label": "Window",
+    "minimize": "Minimize"
+  },
+  "file": {
+    "label": "File",
+    "new": "New"
+  }
+}

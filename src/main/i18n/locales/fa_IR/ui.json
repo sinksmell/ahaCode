@@ -1,0 +1,155 @@
+{
+  "common": {
+    "total": "مجموع",
+    "inbox": "صندوق ورودی",
+    "favorites": "علاقه‌مندی‌ها",
+    "trash": "سطل زباله",
+    "folders": "پوشه‌ها",
+    "tags": "برچسب‌ها",
+    "library": "کتابخانه",
+    "fragment": "قطعه"
+  },
+  "spaces": {
+    "label": "Spaces",
+    "code": {
+      "label": "Code",
+      "tooltip": "Code snippets",
+      "title": "Code Snippets",
+      "allSnippets": "همه Snippetها"
+    },
+    "notes": {
+      "label": "Notes",
+      "tooltip": "Notes",
+      "title": "Notes",
+      "allNotes": "All Notes"
+    },
+    "math": {
+      "label": "Math",
+      "tooltip": "Math notebook",
+      "title": "Math Notebook",
+      "sheetList": "Sheet List",
+      "newSheet": "New Sheet",
+      "untitled": "Untitled",
+      "currencyUnavailable": "Currency rates service unavailable"
+    },
+    "tools": {
+      "label": "Tools",
+      "tooltip": "Developer tools"
+    }
+  },
+  "snippet": {
+    "untitled": "Snippet بدون عنوان",
+    "selectedMultiple": "{{count}} Snippet انتخاب شده",
+    "noSelected": "هیچ Snippet انتخاب نشده"
+  },
+  "notes": {
+    "untitled": "Untitled note",
+    "plural": "Notes",
+    "words": "Words",
+    "symbols": "Symbols",
+    "selectedMultiple": "{{count}} Notes Selected",
+    "noSelected": "No Note Selected"
+  },
+  "folder": {
+    "untitled": "پوشه بدون عنوان"
+  },
+  "button": {
+    "back": "بازگشت",
+    "cancel": "لغو",
+    "confirm": "تایید",
+    "copy": "کپی",
+    "fit": "متناسب",
+    "saveAs": "ذخیره به عنوان",
+    "update": [
+      "رفتن به GitHub",
+      "تایید"
+    ],
+    "zoomIn": "بزرگنمایی",
+    "zoomOut": "کوچک‌نمایی",
+    "darkMode": "حالت تاریک",
+    "toggleDarkMode": "تغییر حالت تاریک",
+    "background": "پس‌زمینه",
+    "goToDownload": "رفتن به دانلود",
+    "goToSettings": "Go to Settings",
+    "refreshPreview": "به‌روزرسانی پیش‌نمایش",
+    "laserPointer": "اشاره‌گر لیزری",
+    "fullscreen": "تمام صفحه",
+    "prev": "قبلی",
+    "next": "بعدی"
+  },
+  "action": {
+    "close": "بستن",
+    "defaultLanguage": "زبان پیش‌فرض",
+    "duplicate": "تکثیر",
+    "rename": "تغییر نام",
+    "restore": "بازیابی",
+    "setCustomIcon": "تنظیم آیکون",
+    "removeCustomIcon": "حذف آیکون",
+    "show": "نمایش",
+    "hide": "پنهان",
+    "showSidebar": "نمایش نوار کناری",
+    "hideSidebar": "مخفی کردن نوار کناری",
+    "showSidebarAndList": "Show Sidebar and List",
+    "hideSidebarAndList": "Hide Sidebar and List",
+    "new": {
+      "storage": "فضای ذخیره‌سازی جدید",
+      "folder": "پوشه جدید",
+      "snippet": "Snippet جدید",
+      "fragment": "قطعه جدید",
+      "note": "New Note"
+    },
+    "add": {
+      "description": "افزودن توضیحات",
+      "tag": "افزودن برچسب",
+      "toFavorites": "افزودن به علاقه‌مندی‌ها"
+    },
+    "open": {
+      "storage": "باز کردن فضای ذخیره‌سازی"
+    },
+    "move": {
+      "storage": "انتقال فضای ذخیره‌سازی",
+      "toTrash": "انتقال به سطل زباله"
+    },
+    "remove": {
+      "fromFavorites": "حذف از علاقه‌مندی‌ها"
+    },
+    "reveal": {
+      "inFinder": "Reveal in Finder",
+      "inFileManager": "Show in File Manager"
+    },
+    "reload": {
+      "storage": "بارگذاری مجدد فضای ذخیره‌سازی",
+      "app": "Reload ahaCode"
+    },
+    "delete": {
+      "common": "حذف",
+      "now": "حذف اکنون",
+      "allData": "حذف تمام داده‌ها",
+      "trash": "خالی کردن سطل زباله"
+    },
+    "migrate": {
+      "fromSnippetsLab": "از SnippetsLab",
+      "fromV3": "از massCode v3"
+    },
+    "export": {
+      "toHtml": "خروجی به HTML"
+    },
+    "copy": {
+      "snippetLink": "کپی لینک Snippet"
+    },
+    "select": {
+      "directory": "Select Directory"
+    }
+  },
+  "placeholder": {
+    "emptyTagList": "برای مشاهده snippetها در اینجا، به آنها برچسب اضافه کنید",
+    "emptyNotesTagList": "Add tags to notes to see them here",
+    "emptyFoldersList": "بدون پوشه",
+    "emptySnippetsList": "بدون اسنیپت",
+    "emptyNotesList": "No Notes",
+    "searchNotes": "Search notes...",
+    "emptySheetList": "No Sheets",
+    "search": "جستجو",
+    "addTag": "افزودن برچسب"
+  }
+}

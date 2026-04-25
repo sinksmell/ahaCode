@@ -1,0 +1,96 @@
+<script setup lang="ts">
+import { Button } from '@/components/ui/shadcn/button'
+import { useApp, useSnippets } from '@/composables'
+import { i18n, ipc } from '@/electron'
+import { Plus, Search, X } from 'lucide-vue-next'
+
+const {
+  isSearch,
+  searchQuery,
+  createSnippetAndSelect,
+  clearSearch,
+  search,
+  searchSelectedIndex,
+  selectSearchSnippet,
+  displayedSnippets,
+} = useSnippets()
+const { isFocusedSearch } = useApp()
+
+ipc.on('main-menu:find', () => {
+  isFocusedSearch.value = true
+})
+
+watch(searchQuery, (v) => {
+  if (v) {
+    search()
+  }
+  else {
+    clearSearch(true)
+  }
+})
+
+function onKeydown(event: KeyboardEvent) {
+  if (event.key === 'ArrowDown') {
+    event.preventDefault()
+    const nextIndex = Math.min(
+      searchSelectedIndex.value + 1,
+      (displayedSnippets.value?.length || 0) - 1,
+    )
+    selectSearchSnippet(nextIndex)
+  }
+  else if (event.key === 'ArrowUp') {
+    event.preventDefault()
+    const prevIndex = Math.max(searchSelectedIndex.value - 1, 0)
+    selectSearchSnippet(prevIndex)
+  }
+  if (event.key === 'Escape') {
+    event.preventDefault()
+    clearSearch(true)
+  }
+}
+</script>
+
+<template>
+  <div
+    class="border-border/70 mt-[var(--content-top-offset)] mb-2 border-b pb-2"
+  >
+    <div
+      class="bg-card/60 focus-within:border-primary/35 focus-within:bg-background mx-2 flex items-center gap-1.5 rounded-md border border-transparent px-2 py-1 transition-colors focus-within:shadow-[0_0_0_3px_var(--primary-soft)]"
+    >
+      <Search
+        class="text-muted-foreground/80 h-[15px] w-[15px] shrink-0"
+        stroke-width="1.8"
+      />
+      <div class="flex-grow">
+        <UiInput
+          v-model="searchQuery"
+          :placeholder="i18n.t('placeholder.search')"
+          variant="ghost"
+          :focus="isFocusedSearch"
+          class="tracking-[-0.003em]"
+          @blur="isFocusedSearch = false"
+          @keydown="onKeydown"
+        />
+      </div>
+      <Button
+        v-if="searchQuery"
+        variant="ghost"
+        class="hover:bg-accent h-6 w-6 p-0"
+        @click="clearSearch(true)"
+      >
+        <X class="h-3.5 w-3.5" />
+      </Button>
+      <UiActionButton
+        v-if="!isSearch"
+        :tooltip="i18n.t('action.new.snippet')"
+        class="hover:text-primary"
+        @click="createSnippetAndSelect"
+      >
+        <Plus
+          class="h-4 w-4"
+          stroke-width="1.8"
+        />
+      </UiActionButton>
+    </div>
+  </div>
+</template>

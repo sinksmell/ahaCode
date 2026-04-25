@@ -1,0 +1,155 @@
+{
+  "common": {
+    "total": "總計",
+    "inbox": "收件匣",
+    "favorites": "收藏",
+    "trash": "回收桶",
+    "folders": "資料夾",
+    "tags": "標籤",
+    "library": "程式庫",
+    "fragment": "片段"
+  },
+  "spaces": {
+    "label": "Spaces",
+    "code": {
+      "label": "Code",
+      "tooltip": "Code snippets",
+      "title": "Code Snippets",
+      "allSnippets": "所有程式碼片段"
+    },
+    "notes": {
+      "label": "Notes",
+      "tooltip": "Notes",
+      "title": "Notes",
+      "allNotes": "All Notes"
+    },
+    "math": {
+      "label": "Math",
+      "tooltip": "Math notebook",
+      "title": "Math Notebook",
+      "sheetList": "Sheet List",
+      "newSheet": "New Sheet",
+      "untitled": "Untitled",
+      "currencyUnavailable": "Currency rates service unavailable"
+    },
+    "tools": {
+      "label": "Tools",
+      "tooltip": "Developer tools"
+    }
+  },
+  "snippet": {
+    "untitled": "未命名程式碼片段",
+    "selectedMultiple": "已選擇 {{count}} 個程式碼片段",
+    "noSelected": "未選擇程式碼片段"
+  },
+  "notes": {
+    "untitled": "Untitled note",
+    "plural": "Notes",
+    "words": "Words",
+    "symbols": "Symbols",
+    "selectedMultiple": "{{count}} Notes Selected",
+    "noSelected": "No Note Selected"
+  },
+  "folder": {
+    "untitled": "未命名資料夾"
+  },
+  "button": {
+    "back": "返回",
+    "cancel": "取消",
+    "confirm": "確認",
+    "copy": "複製",
+    "fit": "適應",
+    "saveAs": "另存為",
+    "update": [
+      "前往 GitHub",
+      "確定"
+    ],
+    "zoomIn": "放大",
+    "zoomOut": "縮小",
+    "darkMode": "深色模式",
+    "toggleDarkMode": "切換深色模式",
+    "background": "背景",
+    "goToDownload": "前往下載",
+    "goToSettings": "Go to Settings",
+    "refreshPreview": "重新整理預覽",
+    "laserPointer": "雷射指標",
+    "fullscreen": "全螢幕",
+    "prev": "上一個",
+    "next": "下一個"
+  },
+  "action": {
+    "close": "關閉",
+    "defaultLanguage": "預設語言",
+    "duplicate": "複製",
+    "rename": "重命名",
+    "restore": "還原",
+    "setCustomIcon": "設置圖標",
+    "removeCustomIcon": "刪除圖標",
+    "show": "顯示",
+    "hide": "隱藏",
+    "showSidebar": "顯示側邊欄",
+    "hideSidebar": "隱藏側邊欄",
+    "showSidebarAndList": "Show Sidebar and List",
+    "hideSidebarAndList": "Hide Sidebar and List",
+    "new": {
+      "storage": "新建儲存庫",
+      "folder": "新建資料夾",
+      "snippet": "新建程式碼片段",
+      "fragment": "新建片段",
+      "note": "New Note"
+    },
+    "add": {
+      "description": "添加描述",
+      "tag": "添加標籤",
+      "toFavorites": "添加到收藏"
+    },
+    "open": {
+      "storage": "開啟儲存庫"
+    },
+    "move": {
+      "storage": "移動儲存庫",
+      "toTrash": "移至回收桶"
+    },
+    "remove": {
+      "fromFavorites": "從收藏中移除"
+    },
+    "reveal": {
+      "inFinder": "Reveal in Finder",
+      "inFileManager": "Show in File Manager"
+    },
+    "reload": {
+      "storage": "重新載入儲存庫",
+      "app": "Reload ahaCode"
+    },
+    "delete": {
+      "common": "刪除",
+      "now": "立即刪除",
+      "allData": "刪除所有數據",
+      "trash": "清空回收桶"
+    },
+    "migrate": {
+      "fromSnippetsLab": "從 SnippetsLab",
+      "fromV3": "從 massCode v3"
+    },
+    "export": {
+      "toHtml": "匯出為 HTML"
+    },
+    "copy": {
+      "snippetLink": "複製程式碼片段連結"
+    },
+    "select": {
+      "directory": "Select Directory"
+    }
+  },
+  "placeholder": {
+    "emptyTagList": "在程式碼片段中添加標籤以在此處查看",
+    "emptyNotesTagList": "Add tags to notes to see them here",
+    "emptyFoldersList": "沒有資料夾",
+    "emptySnippetsList": "沒有程式碼片段",
+    "emptyNotesList": "No Notes",
+    "searchNotes": "Search notes...",
+    "emptySheetList": "No Sheets",
+    "search": "搜尋",
+    "addTag": "添加標籤"
+  }
+}

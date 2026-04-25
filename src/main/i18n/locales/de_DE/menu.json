@@ -1,0 +1,95 @@
+{
+  "app": {
+    "label": "ahaCode",
+    "preferences": "Einstellungen",
+    "devtools": "Entwicklerwerkzeuge",
+    "update": "Nach Updates suchen...",
+    "quit": "ahaCode beenden",
+    "about": "Über ahaCode",
+    "hide": "ahaCode ausblenden",
+    "mathNotebook": "Math Notebook"
+  },
+  "help": {
+    "label": "Hilfe",
+    "website": "Website",
+    "documentation": "Dokumentation",
+    "viewInGitHub": "In GitHub anzeigen",
+    "changeLog": "Änderungsprotokoll",
+    "reportIssue": "Problem melden",
+    "giveStar": "Stern geben",
+    "extension": {
+      "vscode": "VS Code Erweiterung",
+      "raycast": "Raycast Erweiterung",
+      "alfred": "Alfred Erweiterung"
+    },
+    "donate": {
+      "openCollective": "Über Open Collective spenden",
+      "payPal": "Über PayPal spenden",
+      "gumroad": "Über Gumroad spenden (Visa, Mastercard, etc.)"
+    },
+    "twitter": "X",
+    "devTools": "Entwicklerwerkzeuge ein-/ausblenden",
+    "links": {
+      "snippets": "Snippet-Sammlung"
+    }
+  },
+  "view": {
+    "label": "Ansicht",
+    "showSidebar": "Seitenleiste ein-/ausblenden",
+    "sortBy": {
+      "label": "Snippets sortieren nach",
+      "dateModified": "Änderungsdatum",
+      "dateCreated": "Erstellungsdatum",
+      "name": "Name"
+    },
+    "compactMode": "Kompakter Modus",
+    "layout": {
+      "label": "Layout",
+      "allPanels": "All Panels",
+      "listEditor": "List + Editor",
+      "editorOnly": "Editor Only"
+    }
+  },
+  "edit": {
+    "label": "Bearbeiten",
+    "find": "Suchen"
+  },
+  "editor": {
+    "label": "Editor",
+    "copy": "Snippet in Zwischenablage kopieren",
+    "format": "Formatieren",
+    "previewCode": "Code-Vorschau",
+    "previewScreenshot": "Screenshot-Vorschau",
+    "previewJson": "JSON-Vorschau",
+    "fontSizeIncrease": "Schriftgröße erhöhen",
+    "fontSizeDecrease": "Schriftgröße verringern",
+    "fontSizeReset": "Schriftgröße zurücksetzen",
+    "mode": "Mode",
+    "modeRaw": "Raw",
+    "modeLivePreview": "Live Preview",
+    "modePreview": "Preview"
+  },
+  "markdown": {
+    "label": "Markdown",
+    "preview": "Vorschau",
+    "previewMarkdown": "Markdown-Vorschau",
+    "presentationMode": "Präsentationsmodus",
+    "previewMindmap": "Mindmap-Vorschau"
+  },
+  "history": {
+    "label": "Verlauf",
+    "back": "Zurück",
+    "forward": "Vorwärts"
+  },
+  "devtools": {
+    "label": "Entwicklerwerkzeuge"
+  },
+  "window": {
+    "label": "Window",
+    "minimize": "Minimize"
+  },
+  "file": {
+    "label": "File",
+    "new": "New"
+  }
+}

@@ -1,0 +1,58 @@
+<script setup lang="ts">
+import { Button } from '@/components/ui/shadcn/button'
+import { useCopyToClipboard } from '@/composables'
+import { i18n } from '@/electron'
+import slugify from 'slugify'
+
+const input = ref('')
+
+const title = computed(() => i18n.t('devtools:web.slugify.label'))
+const description = computed(() => i18n.t('devtools:web.slugify.description'))
+
+const copy = useCopyToClipboard()
+
+function slugifyText(text: string) {
+  return slugify(text, {
+    lower: true,
+    strict: true,
+  })
+}
+
+const output = computed(() => slugifyText(input.value))
+</script>
+
+<template>
+  <div class="space-y-6">
+    <UiHeading
+      :title="title"
+      :description="description"
+    />
+    <div class="space-y-2">
+      <UiHeading
+        :title="i18n.t('devtools:form.input')"
+        :level="3"
+      />
+      <UiInput
+        v-model="input"
+        :placeholder="i18n.t('devtools:form.placeholder.text')"
+        clearable
+      />
+    </div>
+    <div class="space-y-4">
+      <UiHeading
+        :title="i18n.t('devtools:form.output')"
+        :level="3"
+      />
+      <UiInput
+        :model-value="output"
+        readonly
+      />
+      <Button
+        variant="outline"
+        @click="copy(output)"
+      >
+        {{ i18n.t("button.copy") }}
+      </Button>
+    </div>
+  </div>
+</template>

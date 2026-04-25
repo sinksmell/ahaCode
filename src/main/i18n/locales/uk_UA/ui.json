@@ -1,0 +1,155 @@
+{
+  "common": {
+    "total": "Всього",
+    "inbox": "Вхідні",
+    "favorites": "Обране",
+    "trash": "Кошик",
+    "folders": "Папки",
+    "tags": "Теги",
+    "library": "Бібліотека",
+    "fragment": "Fragment"
+  },
+  "spaces": {
+    "label": "Spaces",
+    "code": {
+      "label": "Code",
+      "tooltip": "Code snippets",
+      "title": "Code Snippets",
+      "allSnippets": "Всі сніпети"
+    },
+    "notes": {
+      "label": "Notes",
+      "tooltip": "Notes",
+      "title": "Notes",
+      "allNotes": "All Notes"
+    },
+    "math": {
+      "label": "Math",
+      "tooltip": "Math notebook",
+      "title": "Math Notebook",
+      "sheetList": "Sheet List",
+      "newSheet": "New Sheet",
+      "untitled": "Untitled",
+      "currencyUnavailable": "Currency rates service unavailable"
+    },
+    "tools": {
+      "label": "Tools",
+      "tooltip": "Developer tools"
+    }
+  },
+  "snippet": {
+    "untitled": "Сніпет без назви",
+    "selectedMultiple": "Вибрано {{count}} сніпетів",
+    "noSelected": "Сніпети не вибрані"
+  },
+  "notes": {
+    "untitled": "Untitled note",
+    "plural": "Notes",
+    "words": "Words",
+    "symbols": "Symbols",
+    "selectedMultiple": "{{count}} Notes Selected",
+    "noSelected": "No Note Selected"
+  },
+  "folder": {
+    "untitled": "Папка без назви"
+  },
+  "button": {
+    "back": "Назад",
+    "cancel": "Скасувати",
+    "confirm": "Підтвердити",
+    "copy": "Копіювати",
+    "fit": "За розміром",
+    "saveAs": "Зберегти як",
+    "update": [
+      "Перейти на GitHub",
+      "OK"
+    ],
+    "zoomIn": "Збільшити",
+    "zoomOut": "Зменшити",
+    "darkMode": "Темний режим",
+    "toggleDarkMode": "Перемкнути темний режим",
+    "background": "Фон",
+    "goToDownload": "Перейти до завантаження",
+    "goToSettings": "Go to Settings",
+    "refreshPreview": "Оновити попередній перегляд",
+    "laserPointer": "Лазерна указка",
+    "fullscreen": "Повний екран",
+    "prev": "Попередній",
+    "next": "Наступний"
+  },
+  "action": {
+    "close": "Закрити",
+    "defaultLanguage": "Мова за замовчуванням",
+    "duplicate": "Дублювати",
+    "rename": "Перейменувати",
+    "restore": "Відновити",
+    "setCustomIcon": "Встановити іконку",
+    "removeCustomIcon": "Видалити іконку",
+    "show": "Показати",
+    "hide": "Приховати",
+    "showSidebar": "Показати бічну панель",
+    "hideSidebar": "Сховати бічну панель",
+    "showSidebarAndList": "Show Sidebar and List",
+    "hideSidebarAndList": "Hide Sidebar and List",
+    "new": {
+      "storage": "Нове сховище",
+      "folder": "Нова папка",
+      "snippet": "Новий сніпет",
+      "fragment": "Новий фрагмент",
+      "note": "New Note"
+    },
+    "add": {
+      "description": "Додати опис",
+      "tag": "Додати тег",
+      "toFavorites": "Додати до обраного"
+    },
+    "open": {
+      "storage": "Відкрити сховище"
+    },
+    "move": {
+      "storage": "Перемістити сховище",
+      "toTrash": "Перемістити до кошика"
+    },
+    "remove": {
+      "fromFavorites": "Видалити з обраного"
+    },
+    "reveal": {
+      "inFinder": "Reveal in Finder",
+      "inFileManager": "Show in File Manager"
+    },
+    "reload": {
+      "storage": "Перезавантажити сховище",
+      "app": "Reload ahaCode"
+    },
+    "delete": {
+      "common": "Видалити",
+      "now": "Видалити зараз",
+      "allData": "Видалити всі дані",
+      "trash": "Очистити кошик"
+    },
+    "migrate": {
+      "fromSnippetsLab": "Зі SnippetsLab",
+      "fromV3": "З massCode v3"
+    },
+    "export": {
+      "toHtml": "Експортувати в HTML"
+    },
+    "copy": {
+      "snippetLink": "Копіювати посилання на сніпет"
+    },
+    "select": {
+      "directory": "Select Directory"
+    }
+  },
+  "placeholder": {
+    "emptyTagList": "Додайте теги до сніпетів, щоб побачити їх тут",
+    "emptyNotesTagList": "Add tags to notes to see them here",
+    "emptyFoldersList": "Немає папок",
+    "emptySnippetsList": "Немає сніппетів",
+    "emptyNotesList": "No Notes",
+    "searchNotes": "Search notes...",
+    "emptySheetList": "No Sheets",
+    "search": "Пошук",
+    "addTag": "Додати тег"
+  }
+}

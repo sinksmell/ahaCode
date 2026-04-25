@@ -1,0 +1,295 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* ───────────────────────────────────────────────────────────────────────────
+   Paper & Copper · type system
+   Editorial serif (Instrument Serif) · Precise sans (Geist) · Mono (JetBrains)
+   The font stylesheet is loaded via a <link> in index.html so it doesn't get
+   inlined into Vue SFC <style> blocks via Tailwind v4 `@reference`, which
+   would push the @import past the first-statement position and trip PostCSS.
+─────────────────────────────────────────────────────────────────────────── */
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --content-top-offset: 8px;
+  --editor-tool-header-height: 36px;
+  --radius: 0.5rem;
+
+  /* ── Font stacks ──────────────────────────────────────────────────── */
+  --font-sans:
+    "Geist", ui-sans-serif, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    "Helvetica Neue", sans-serif;
+  --font-display:
+    "Instrument Serif", "New York", "Times New Roman", Georgia, serif;
+  --font-mono:
+    "JetBrains Mono", ui-monospace, "SF Mono", "Menlo", Consolas, monospace;
+
+  /* ── Core — warm cream paper ──────────────────────────────────────── */
+  --background: oklch(98.3% 0.006 85);
+  --foreground: oklch(22% 0.018 55);
+  --card: oklch(96% 0.01 82);
+  --card-foreground: oklch(22% 0.018 55);
+  --popover: oklch(99% 0.005 85);
+  --popover-foreground: oklch(22% 0.018 55);
+
+  /* Copper/terracotta — warm, restrained */
+  --primary: oklch(58% 0.128 42);
+  --primary-foreground: oklch(98% 0.005 85);
+  --primary-soft: oklch(58% 0.128 42 / 0.1);
+  --primary-ring: oklch(58% 0.128 42 / 0.35);
+
+  --secondary: oklch(94% 0.012 80);
+  --secondary-foreground: oklch(25% 0.02 55);
+  --muted: oklch(95.5% 0.01 80);
+  --muted-foreground: oklch(52% 0.018 55);
+
+  --accent: oklch(92% 0.014 75);
+  --accent-hover: color-mix(in oklch, var(--accent) 60%, var(--background));
+  --accent-foreground: oklch(24% 0.02 55);
+
+  --destructive: oklch(55% 0.19 28);
+  --warning: oklch(66% 0.14 65);
+  --border: oklch(88% 0.012 75);
+  --input: oklch(90% 0.012 75);
+  --ring: oklch(58% 0.128 42);
+
+  /* ── Misc ─────────────────────────────────────────────────────────── */
+  --text-highlight: oklch(88% 0.11 82);
+  --scrollbar: oklch(30% 0.02 55 / 0.22);
+  --internal-link-bg: oklch(from var(--primary) l c h / 0.1);
+  --internal-link-border: oklch(from var(--primary) l c h / 0.24);
+  --internal-link-fg: var(--primary);
+  --internal-link-bg-hover: oklch(from var(--primary) l c h / 0.18);
+  --internal-link-border-hover: oklch(from var(--primary) l c h / 0.34);
+  --internal-link-fg-hover: var(--primary);
+  --diff-added-bg: oklch(0.9 0.07 150);
+  --diff-removed-bg: oklch(0.91 0.06 25);
+  --diff-modified-bg: oklch(0.93 0.08 90);
+  --canvas-darken: 0%;
+  --canvas: color-mix(
+    in oklch,
+    var(--background) calc(100% - var(--canvas-darken)),
+    black var(--canvas-darken)
+  );
+
+  /* ── Charts — warm family ─────────────────────────────────────────── */
+  --chart-1: oklch(0.58 0.128 42);
+  --chart-2: oklch(0.6 0.1 180);
+  --chart-3: oklch(0.55 0.13 260);
+  --chart-4: oklch(0.72 0.15 85);
+  --chart-5: oklch(0.64 0.14 20);
+
+  /* ── Sidebar — paper variant ──────────────────────────────────────── */
+  --sidebar: oklch(97% 0.008 82);
+  --sidebar-foreground: oklch(25% 0.02 55);
+  --sidebar-primary: oklch(58% 0.128 42);
+  --sidebar-primary-foreground: oklch(98% 0.005 85);
+  --sidebar-accent: oklch(92% 0.014 75);
+  --sidebar-accent-foreground: oklch(24% 0.02 55);
+  --sidebar-border: oklch(89% 0.012 78);
+  --sidebar-ring: oklch(58% 0.128 42);
+}
+
+.dark {
+  /* ── Core — warm charcoal, inspired by Codex ──────────────────────── */
+  --background: oklch(20% 0.008 55);
+  --foreground: oklch(88% 0.014 80);
+  --card: oklch(23.5% 0.009 55);
+  --card-foreground: oklch(88% 0.014 80);
+  --popover: oklch(22% 0.009 55);
+  --popover-foreground: oklch(88% 0.014 80);
+
+  /* Copper — slightly lifted for dark */
+  --primary: oklch(70% 0.14 48);
+  --primary-foreground: oklch(18% 0.01 55);
+  --primary-soft: oklch(70% 0.14 48 / 0.14);
+  --primary-ring: oklch(70% 0.14 48 / 0.4);
+
+  --secondary: oklch(27% 0.01 55);
+  --secondary-foreground: oklch(92% 0.012 80);
+  --muted: oklch(26% 0.01 55);
+  --muted-foreground: oklch(65% 0.014 75);
+
+  --accent: oklch(31% 0.012 55);
+  --accent-hover: color-mix(in oklch, var(--accent) 60%, var(--background));
+  --accent-foreground: oklch(92% 0.012 80);
+
+  --destructive: oklch(64% 0.17 22);
+  --warning: oklch(74% 0.14 72);
+  --border: oklch(30% 0.011 55);
+  --input: oklch(30% 0.011 55);
+  --ring: oklch(70% 0.14 48);
+
+  /* ── Misc ─────────────────────────────────────────────────────────── */
+  --text-highlight: oklch(75% 0.16 85);
+  --scrollbar: oklch(85% 0.012 80 / 0.24);
+  --internal-link-bg: oklch(from var(--primary) l c h / 0.22);
+  --internal-link-border: oklch(from var(--primary) l c h / 0.42);
+  --internal-link-fg: oklch(from var(--primary-foreground) l c h / 0.85);
+  --internal-link-bg-hover: oklch(from var(--primary) l c h / 0.3);
+  --internal-link-border-hover: oklch(from var(--primary) l c h / 0.55);
+  --internal-link-fg-hover: oklch(from var(--primary-foreground) l c h / 0.92);
+  --diff-added-bg: oklch(0.34 0.06 155);
+  --diff-removed-bg: oklch(0.35 0.05 25);
+  --diff-modified-bg: oklch(0.38 0.06 90);
+  --canvas-darken: 4%;
+
+  /* Charts */
+  --chart-1: oklch(0.7 0.14 48);
+  --chart-2: oklch(0.65 0.12 180);
+  --chart-3: oklch(0.6 0.13 260);
+  --chart-4: oklch(0.78 0.16 85);
+  --chart-5: oklch(0.68 0.15 20);
+
+  /* Sidebar */
+  --sidebar: oklch(21.5% 0.009 55);
+  --sidebar-foreground: oklch(86% 0.012 78);
+  --sidebar-primary: oklch(70% 0.14 48);
+  --sidebar-primary-foreground: oklch(18% 0.01 55);
+  --sidebar-accent: oklch(29% 0.011 55);
+  --sidebar-accent-foreground: oklch(92% 0.012 80);
+  --sidebar-border: oklch(29% 0.011 55);
+  --sidebar-ring: oklch(70% 0.14 48);
+}
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 3px);
+  --radius-md: calc(var(--radius) - 1px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 3px);
+
+  /* Fonts */
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+  --font-display: var(--font-display);
+
+  /* Core */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-soft: var(--primary-soft);
+  --color-primary-ring: var(--primary-ring);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-warning: var(--warning);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* Misc */
+  --color-text-highlight: var(--text-highlight);
+  --color-scrollbar: var(--scrollbar);
+  --color-diff-added-bg: var(--diff-added-bg);
+  --color-diff-removed-bg: var(--diff-removed-bg);
+  --color-diff-modified-bg: var(--diff-modified-bg);
+  --color-canvas: var(--canvas);
+
+  /* Charts */
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+
+  /* Sidebar */
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: 13.5px;
+  font-feature-settings: "ss01", "ss02", "cv11";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  letter-spacing: -0.003em;
+}
+
+/* ── Paper grain — subtle, only in light mode ──────────────────────── */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.35;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.15 0 0 0 0 0.1 0 0 0 0 0.05 0 0 0 0.08 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  mix-blend-mode: multiply;
+}
+.dark body::before {
+  opacity: 0.5;
+  mix-blend-mode: overlay;
+}
+
+/* Display (serif) utility — for headings & brand treatment */
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.01em;
+  font-feature-settings: "liga", "dlig";
+}
+
+/* ── Refined scrollbar ─────────────────────────────────────────────── */
+.scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar) transparent;
+}
+
+.scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar);
+  border-radius: 3px;
+  border: 1px solid transparent;
+  background-clip: padding-box;
+}
+
+.scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: color-mix(in oklch, var(--primary) 60%, var(--scrollbar));
+}
+
+/* ── Sidebar active-item indicator: a whisper of copper ────────────── */
+[data-sidebar-item][data-focused="true"],
+[data-sidebar-item][data-selected="true"] {
+  position: relative;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  /* Selection color echoes the copper accent */
+  ::selection {
+    background: oklch(from var(--primary) l c h / 0.22);
+    color: var(--foreground);
+  }
+}

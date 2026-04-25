@@ -1,0 +1,95 @@
+{
+  "app": {
+    "label": "ahaCode",
+    "preferences": "Préférences",
+    "devtools": "Outils de développement",
+    "update": "Rechercher des mises à jour...",
+    "quit": "Quitter ahaCode",
+    "about": "À propos de ahaCode",
+    "hide": "Masquer ahaCode",
+    "mathNotebook": "Math Notebook"
+  },
+  "help": {
+    "label": "Aide",
+    "website": "Site Web",
+    "documentation": "Documentation",
+    "viewInGitHub": "Voir sur GitHub",
+    "changeLog": "Journal des modifications",
+    "reportIssue": "Signaler un problème",
+    "giveStar": "Donner une étoile",
+    "extension": {
+      "vscode": "Extension VS Code",
+      "raycast": "Extension Raycast",
+      "alfred": "Extension Alfred"
+    },
+    "donate": {
+      "openCollective": "Faire un don sur Open Collective",
+      "payPal": "Faire un don via PayPal",
+      "gumroad": "Faire un don via Gumroad (Visa, Mastercard, etc.)"
+    },
+    "twitter": "X",
+    "devTools": "Basculer les outils de développement",
+    "links": {
+      "snippets": "Collection de snippets"
+    }
+  },
+  "view": {
+    "label": "Affichage",
+    "showSidebar": "Afficher/masquer la barre latérale",
+    "sortBy": {
+      "label": "Trier les snippets par",
+      "dateModified": "Date de modification",
+      "dateCreated": "Date de création",
+      "name": "Nom"
+    },
+    "compactMode": "Mode compact",
+    "layout": {
+      "label": "Layout",
+      "allPanels": "All Panels",
+      "listEditor": "List + Editor",
+      "editorOnly": "Editor Only"
+    }
+  },
+  "edit": {
+    "label": "Édition",
+    "find": "Rechercher"
+  },
+  "editor": {
+    "label": "Éditeur",
+    "copy": "Copier le snippet dans le presse-papiers",
+    "format": "Formater",
+    "previewCode": "Aperçu du code",
+    "previewScreenshot": "Aperçu de la capture d'écran",
+    "previewJson": "Aperçu JSON",
+    "fontSizeIncrease": "Augmenter la taille de la police",
+    "fontSizeDecrease": "Diminuer la taille de la police",
+    "fontSizeReset": "Réinitialiser la taille de la police",
+    "mode": "Mode",
+    "modeRaw": "Raw",
+    "modeLivePreview": "Live Preview",
+    "modePreview": "Preview"
+  },
+  "markdown": {
+    "label": "Markdown",
+    "preview": "Aperçu",
+    "previewMarkdown": "Aperçu Markdown",
+    "presentationMode": "Mode présentation",
+    "previewMindmap": "Aperçu de la carte mentale"
+  },
+  "history": {
+    "label": "Historique",
+    "back": "Retour",
+    "forward": "Suivant"
+  },
+  "devtools": {
+    "label": "Outils de développement"
+  },
+  "window": {
+    "label": "Window",
+    "minimize": "Minimize"
+  },
+  "file": {
+    "label": "File",
+    "new": "New"
+  }
+}

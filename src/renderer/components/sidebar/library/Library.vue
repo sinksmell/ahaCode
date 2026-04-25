@@ -1,0 +1,319 @@
+<script setup lang="ts">
+import type { Node } from '@/components/sidebar/folders/types'
+import Tree from '@/components/sidebar/folders/Tree.vue'
+import LibraryItem from '@/components/sidebar/library/Item.vue'
+import * as ContextMenu from '@/components/ui/shadcn/context-menu'
+import {
+  initCodeSpace,
+  useApp,
+  useFolders,
+  useResizeHandle,
+  useSnippets,
+  useTags,
+} from '@/composables'
+import { LibraryFilter } from '@/composables/types'
+import { scrollToSnippetIndex } from '@/composables/useSnippetScroller'
+import { i18n, store } from '@/electron'
+import { scrollToElement } from '@/utils'
+import { Archive, Inbox, Plus, Star, Trash } from 'lucide-vue-next'
+import { LAYOUT_DEFAULTS } from '~/main/store/constants'
+
+const { state, isAppLoading, isCodeSpaceInitialized, pendingCodeNavigation }
+  = useApp()
+const { tags } = useTags()
+const {
+  getSnippets,
+  selectFirstSnippet,
+  emptyTrash,
+  isRestoreStateBlocked,
+  clearSearch,
+  displayedSnippets,
+} = useSnippets()
+const {
+  folders,
+  selectFolder,
+  createFolderAndSelect,
+  updateFolder,
+  selectedFolderIds,
+} = useFolders()
+
+const tagsHandleRef = ref<HTMLElement>()
+
+function normalizeTagsHeight(value: number | undefined) {
+  if (typeof value !== 'number' || Number.isNaN(value) || value < 100) {
+    return LAYOUT_DEFAULTS.tags.height
+  }
+  return Math.max(LAYOUT_DEFAULTS.tags.min, value)
+}
+
+const tagsHeight = ref(
+  normalizeTagsHeight(
+    store.app.get('code.layout.tagsListHeight') as number | undefined,
+  ),
+)
+
+useResizeHandle(tagsHandleRef, {
+  direction: 'vertical',
+  onMove(dy) {
+    tagsHeight.value = Math.max(
+      LAYOUT_DEFAULTS.tags.min,
+      tagsHeight.value - dy,
+    )
+  },
+  onEnd() {
+    store.app.set('code.layout.tagsListHeight', tagsHeight.value)
+  },
+})
+
+const libraryItems = [
+  { id: LibraryFilter.Inbox, name: i18n.t('common.inbox'), icon: Inbox },
+  {
+    id: LibraryFilter.Favorites,
+    name: i18n.t('common.favorites'),
+    icon: Star,
+  },
+  {
+    id: LibraryFilter.All,
+    name: i18n.t('spaces.code.allSnippets'),
+    icon: Archive,
+  },
+  { id: LibraryFilter.Trash, name: i18n.t('common.trash'), icon: Trash },
+]
+
+async function initApp() {
+  if (pendingCodeNavigation.value) {
+    return
+  }
+
+  if (isCodeSpaceInitialized.value) {
+    isAppLoading.value = false
+    return
+  }
+
+  isAppLoading.value = true
+  await initCodeSpace()
+
+  nextTick(() => {
+    scrollToElement(`[id="${state.folderId}"]`)
+
+    const index
+      = displayedSnippets.value?.findIndex(s => s.id === state.snippetId) ?? -1
+    if (index >= 0) {
+      scrollToSnippetIndex(index)
+    }
+  })
+
+  isAppLoading.value = false
+}
+
+void initApp()
+
+async function onFolderClick({
+  id,
+  event,
+}: {
+  id: number
+  event?: MouseEvent
+}) {
+  if (event?.shiftKey) {
+    await selectFolder(id, { mode: 'range', ensureVisibility: false })
+    return
+  }
+
+  if (event && (event.metaKey || event.ctrlKey)) {
+    await selectFolder(id, { mode: 'toggle', ensureVisibility: false })
+    return
+  }
+
+  if (state.folderId !== id || selectedFolderIds.value.length > 1) {
+    isRestoreStateBlocked.value = true
+    clearSearch()
+
+    await selectFolder(id)
+    await getSnippets({ folderId: id })
+    selectFirstSnippet()
+  }
+}
+
+async function onFolderToggle(node: Node) {
+  try {
+    const { id, isOpen } = node
+
+    updateFolder(id, { isOpen: !isOpen ? 1 : 0 })
+  }
+  catch (error) {
+    console.error('Folder update error:', error)
+  }
+}
+
+async function onFolderDrag({
+  nodes,
+  target,
+  position,
+}: {
+  nodes: Node[]
+  target: Node
+  position: 'before' | 'after' | 'center'
+}) {
+  try {
+    // Фильтруем узлы, исключая целевой, чтобы избежать перемещения папки в себя
+    const movableNodes = nodes.filter(node => node.id !== target.id)
+
+    if (!movableNodes.length) {
+      return
+    }
+
+    if (position === 'center') {
+      // Перемещение внутрь целевой папки
+      const destinationParentId = Number(target.id)
+      let orderIndex = target.children?.length || 0
+
+      for (const node of movableNodes) {
+        await updateFolder(node.id, {
+          parentId: destinationParentId,
+          orderIndex,
+        })
+        orderIndex += 1
+      }
+
+      return
+    }
+
+    // Перемещение до или после целевой папки
+    for (const node of movableNodes) {
+      const isDraggingUp = node.orderIndex > target.orderIndex
+
+      const newParentId: number | null = target.parentId || null
+      let newOrderIndex: number
+
+      if (node.parentId === target.parentId) {
+        // Если перемещаем внутри одного списка, корректируем по направлению и позиции
+        if (position === 'after') {
+          newOrderIndex = isDraggingUp
+            ? target.orderIndex + 1
+            : target.orderIndex
+        }
+        else {
+          newOrderIndex = isDraggingUp
+            ? target.orderIndex
+            : Math.max(target.orderIndex - 1, 0)
+        }
+      }
+      else {
+        // Если перемещение в другой родительский элемент
+        newOrderIndex
+          = position === 'after' ? target.orderIndex + 1 : target.orderIndex
+      }
+
+      await updateFolder(node.id, {
+        parentId: newParentId,
+        orderIndex: newOrderIndex,
+      })
+    }
+  }
+  catch (error) {
+    console.error('Folder update error:', error)
+  }
+}
+</script>
+
+<template>
+  <div class="flex h-full min-h-0 flex-col">
+    <div
+      class="shrink-0 overflow-hidden"
+      data-sidebar-library
+    >
+      <ContextMenu.ContextMenu>
+        <ContextMenu.ContextMenuTrigger>
+          <div class="px-1">
+            <LibraryItem
+              v-for="i in libraryItems"
+              :id="i.id"
+              :key="i.name"
+              :name="i.name"
+              :icon="i.icon"
+            />
+          </div>
+        </ContextMenu.ContextMenuTrigger>
+        <ContextMenu.ContextMenuContent>
+          <ContextMenu.ContextMenuItem @click="emptyTrash">
+            {{ i18n.t("action.delete.trash") }}
+          </ContextMenu.ContextMenuItem>
+        </ContextMenu.ContextMenuContent>
+      </ContextMenu.ContextMenu>
+    </div>
+
+    <div class="flex min-h-0 flex-1 flex-col">
+      <div class="min-h-0 flex-1">
+        <div class="flex h-full min-h-0 flex-col">
+          <SidebarSectionHeader :title="i18n.t('common.folders')">
+            <template #action>
+              <UiActionButton
+                :tooltip="i18n.t('action.new.folder')"
+                @click="createFolderAndSelect()"
+              >
+                <Plus class="h-4 w-4" />
+              </UiActionButton>
+            </template>
+          </SidebarSectionHeader>
+
+          <div class="min-h-0 flex-1">
+            <Tree
+              v-if="folders?.length"
+              v-model="folders"
+              class="h-full px-0.5 pb-1"
+              @click-node="onFolderClick"
+              @toggle-node="onFolderToggle"
+              @drag-node="onFolderDrag"
+            />
+
+            <UiEmptyPlaceholder
+              v-else
+              :text="i18n.t('placeholder.emptyFoldersList')"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!--
+        Resize handle for the tags panel.
+        The visible hairline sits at the BOTTOM of the handle container, and
+        the grabbable hit area (6px) sits ABOVE that line — in the folder
+        tree's margin — so it never overlaps the tags section below it and
+        never silently eats clicks on tag rows near the top.
+      -->
+      <div
+        ref="tagsHandleRef"
+        class="before:bg-border hover:before:bg-primary data-[resizing]:before:bg-primary relative z-10 flex h-1.5 shrink-0 cursor-row-resize bg-transparent before:absolute before:inset-x-0 before:bottom-0 before:h-px before:transition-[background-color,height] before:duration-150 before:content-[''] hover:before:h-0.5 hover:before:delay-200 data-[resizing]:before:h-0.5"
+      />
+
+      <div
+        :style="{
+          'flex-basis': `${tagsHeight}px`,
+          'min-height': '44px',
+          'max-height': `${tagsHeight}px`,
+        }"
+        class="relative z-[1] min-h-0 overflow-hidden"
+      >
+        <div class="flex h-full min-h-0 flex-col">
+          <SidebarSectionHeader :title="i18n.t('common.tags')">
+            <template
+              v-if="tags.length"
+              #action
+            >
+              <span
+                class="bg-primary-soft text-primary/85 border-primary/20 rounded-full border px-1.5 py-[3px] font-mono text-[10px] leading-none tracking-[0.04em] tabular-nums"
+              >
+                {{ tags.length }}
+              </span>
+            </template>
+          </SidebarSectionHeader>
+
+          <div class="min-h-0 flex-1">
+            <SidebarTags class="h-full px-1 pb-1" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>

@@ -1,0 +1,95 @@
+{
+  "app": {
+    "label": "ahaCode",
+    "preferences": "Nastavení",
+    "devtools": "Vývojářské nástroje",
+    "update": "Zkontrolovat aktualizace...",
+    "quit": "Ukončit ahaCode",
+    "about": "O aplikaci ahaCode",
+    "hide": "Skrýt ahaCode",
+    "mathNotebook": "Math Notebook"
+  },
+  "help": {
+    "label": "Nápověda",
+    "website": "Webové stránky",
+    "documentation": "Dokumentace",
+    "viewInGitHub": "Zobrazit na GitHubu",
+    "changeLog": "Seznam změn",
+    "reportIssue": "Nahlásit problém",
+    "giveStar": "Dát hvězdičku",
+    "extension": {
+      "vscode": "VS Code rozšíření",
+      "raycast": "Raycast rozšíření",
+      "alfred": "Alfred rozšíření"
+    },
+    "donate": {
+      "openCollective": "Přispět na Open Collective",
+      "payPal": "Přispět přes PayPal",
+      "gumroad": "Přispět přes Gumroad (Visa, Mastercard, atd.)"
+    },
+    "twitter": "X",
+    "devTools": "Přepnout vývojářské nástroje",
+    "links": {
+      "snippets": "Kolekce snippetů"
+    }
+  },
+  "view": {
+    "label": "Zobrazení",
+    "showSidebar": "Zobrazit/skrýt postranní panel",
+    "sortBy": {
+      "label": "Seřadit snippety podle",
+      "dateModified": "Data úpravy",
+      "dateCreated": "Data vytvoření",
+      "name": "Názvu"
+    },
+    "compactMode": "Kompaktní režim",
+    "layout": {
+      "label": "Layout",
+      "allPanels": "All Panels",
+      "listEditor": "List + Editor",
+      "editorOnly": "Editor Only"
+    }
+  },
+  "edit": {
+    "label": "Upravit",
+    "find": "Najít"
+  },
+  "editor": {
+    "label": "Editor",
+    "copy": "Kopírovat snippet do schránky",
+    "format": "Formátovat",
+    "previewCode": "Náhled kódu",
+    "previewScreenshot": "Náhled snímku obrazovky",
+    "previewJson": "Náhled JSON",
+    "fontSizeIncrease": "Zvětšit velikost písma",
+    "fontSizeDecrease": "Zmenšit velikost písma",
+    "fontSizeReset": "Obnovit velikost písma",
+    "mode": "Mode",
+    "modeRaw": "Raw",
+    "modeLivePreview": "Live Preview",
+    "modePreview": "Preview"
+  },
+  "markdown": {
+    "label": "Markdown",
+    "preview": "Náhled",
+    "previewMarkdown": "Náhled Markdownu",
+    "presentationMode": "Prezentační režim",
+    "previewMindmap": "Náhled myšlenkové mapy"
+  },
+  "history": {
+    "label": "Historie",
+    "back": "Zpět",
+    "forward": "Vpřed"
+  },
+  "devtools": {
+    "label": "Vývojářské nástroje"
+  },
+  "window": {
+    "label": "Okno",
+    "minimize": "Minimalizovat"
+  },
+  "file": {
+    "label": "File",
+    "new": "New"
+  }
+}

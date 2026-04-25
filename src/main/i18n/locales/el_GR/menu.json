@@ -1,0 +1,95 @@
+{
+  "app": {
+    "label": "ahaCode",
+    "preferences": "Προτιμήσεις",
+    "devtools": "Developer Tools",
+    "update": "Έλεγχος για Ενημερώσεις...",
+    "quit": "Έξοδος από το ahaCode",
+    "about": "Σχετικά με το ahaCode",
+    "hide": "Απόκρυψη ahaCode",
+    "mathNotebook": "Math Notebook"
+  },
+  "help": {
+    "label": "Βοήθεια",
+    "website": "Ιστοσελίδα",
+    "documentation": "Τεκμηρίωση",
+    "viewInGitHub": "Προβολή στο GitHub",
+    "changeLog": "Αρχείο Αλλαγών",
+    "reportIssue": "Αναφορά Προβλήματος",
+    "giveStar": "Δώστε ένα Αστέρι",
+    "extension": {
+      "vscode": "VS Code Extension",
+      "raycast": "Raycast Extension",
+      "alfred": "Alfred Extension"
+    },
+    "donate": {
+      "openCollective": "Δωρεά στο Open Collective",
+      "payPal": "Δωρεά μέσω PayPal",
+      "gumroad": "Δωρεά μέσω Gumroad (Visa, Mastercard, κλπ.)"
+    },
+    "twitter": "X",
+    "devTools": "Εναλλαγή Developer Tools",
+    "links": {
+      "snippets": "Συλλογή Snippets"
+    }
+  },
+  "view": {
+    "label": "Προβολή",
+    "showSidebar": "Εμφάνιση/απόκρυψη πλαϊνής γραμμής",
+    "sortBy": {
+      "label": "Ταξινόμηση Snippets κατά",
+      "dateModified": "Ημερομηνία Τροποποίησης",
+      "dateCreated": "Ημερομηνία Δημιουργίας",
+      "name": "Όνομα"
+    },
+    "compactMode": "Συμπαγής Λειτουργία",
+    "layout": {
+      "label": "Layout",
+      "allPanels": "All Panels",
+      "listEditor": "List + Editor",
+      "editorOnly": "Editor Only"
+    }
+  },
+  "edit": {
+    "label": "Επεξεργασία",
+    "find": "Εύρεση"
+  },
+  "editor": {
+    "label": "Editor",
+    "copy": "Αντιγραφή Snippet στο Πρόχειρο",
+    "format": "Μορφοποίηση",
+    "previewCode": "Προεπισκόπηση Κώδικα",
+    "previewScreenshot": "Προεπισκόπηση Screenshot",
+    "previewJson": "Προεπισκόπηση JSON",
+    "fontSizeIncrease": "Αύξηση Μεγέθους Γραμματοσειράς",
+    "fontSizeDecrease": "Μείωση Μεγέθους Γραμματοσειράς",
+    "fontSizeReset": "Επαναφορά Μεγέθους Γραμματοσειράς",
+    "mode": "Mode",
+    "modeRaw": "Raw",
+    "modeLivePreview": "Live Preview",
+    "modePreview": "Preview"
+  },
+  "markdown": {
+    "label": "Markdown",
+    "preview": "Προεπισκόπηση",
+    "previewMarkdown": "Προεπισκόπηση Markdown",
+    "presentationMode": "Λειτουργία Παρουσίασης",
+    "previewMindmap": "Προεπισκόπηση Mindmap"
+  },
+  "history": {
+    "label": "Ιστορικό",
+    "back": "Πίσω",
+    "forward": "Μπροστά"
+  },
+  "devtools": {
+    "label": "Developer Tools"
+  },
+  "window": {
+    "label": "Window",
+    "minimize": "Minimize"
+  },
+  "file": {
+    "label": "File",
+    "new": "New"
+  }
+}

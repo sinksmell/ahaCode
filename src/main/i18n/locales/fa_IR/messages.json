@@ -1,0 +1,45 @@
+{
+  "confirm": {
+    "delete": "آیا مطمئن هستید که می‌خواهید \"{{name}}\" را حذف کنید؟",
+    "deletePermanently": "آیا مطمئن هستید که می‌خواهید \"{{name}}\" را به طور دائم حذف کنید؟",
+    "deleteConfirmMultipleSnippets": "آیا مطمئن هستید که می‌خواهید {{count}} snippet انتخاب شده را به طور دائم حذف کنید؟",
+    "emptyTrash": "آیا مطمئن هستید که می‌خواهید تمام snippets موجود در سطل زباله را به طور دائم حذف کنید؟",
+    "migrateToMarkdown": [
+      "Migrate to Markdown Vault?",
+      "The selected vault will be overwritten with the current SQLite library."
+    ]
+  },
+  "success": {
+    "copied": "در کلیپ‌بورد کپی شد",
+    "migrateToMarkdown": "Migrated to Markdown Vault. Folders: {{folders}}, snippets: {{snippets}}, tags: {{tags}}.",
+    "vaultLoaded": "Vault successfully loaded."
+  },
+  "warning": {
+    "noUndo": "شما نمی‌توانید این عمل را برگردانید.",
+    "allSnippetsMoveToTrash": "تمام snippets در این پوشه به سطل زباله منتقل خواهند شد.",
+    "deleteTag": "این کار باعث حذف برچسب از تمام snippets خواهد شد.",
+    "createDb": "لطفاً پوشه دیگری را انتخاب کنید",
+    "htmlCssPreview": "برای دیدن نتیجه، یک قطعه HTML اضافه کنید. برای استایل‌دهی CSS و برای تعامل JavaScript اضافه کنید.",
+    "codeBlockRenderer": [
+      "هنگام استفاده از Codemirror، زبان تنظیم شده برای بلوک کد باید با یکی از مقادیر",
+      "languages"
+    ]
+  },
+  "error": {
+    "migration": "Auto-migration from SQLite failed: {{error}}"
+  },
+  "description": {
+    "storageVault": "Choose the vault directory. To sync between devices, select a folder in iCloud Drive, Google Drive or Dropbox.",
+    "language": "To apply language changes, you need to reload the app.",
+    "migrateSqliteUtility": "If you have a massCode.db file from a previous version, use this utility to import your data into the current Markdown Vault."
+  },
+  "special": {
+    "supportMessage": "ahaCode is a free, open-source fork of massCode under AGPL-3.0. If you find it useful, please {{-tagStart}}star the repo{{-tagEnd}} to support development.",
+    "unsponsored": "بدون حامی مالی"
+  },
+  "release": {},
+  "update": {
+    "available": "نسخه {{newVersion}} برای دانلود در دسترس است.\nنسخه شما {{oldVersion}} است.",
+    "noAvailable": "در حال حاضر به‌روزرسانی در دسترس نیست."
+  }
+}

@@ -1,0 +1,57 @@
+name: 🐞 Bug report
+description: Report an issue with ahaCode
+title: '[Bug]: '
+labels: [pending triage]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  - type: textarea
+    id: describe
+    attributes:
+      label: Describe the bug
+      description: A clear and concise description of what the bug is. If applicable, add screenshots to help explain your problem.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduse
+    attributes:
+      label: To reproduce
+      description: Steps to reproduce the behavior
+      value: |
+        1. Go to ...
+        2. Click on ...
+        3. Scroll down to ..
+        4. See error
+    validations:
+      required: true
+  - type: input
+    id: app_details
+    attributes:
+      label: App Version and Architecture
+      description: What version and architecture of ahaCode are you running? You can get this info from the About ahaCode in app menu.
+      placeholder: e.g. 4.0.1 (arm64)
+    validations:
+      required: true
+  - type: textarea
+    id: system
+    attributes:
+      label: System info
+      description: Output of `npx envinfo --system`
+      render: shell
+      placeholder: System
+    validations:
+      required: true
+  - type: checkboxes
+    id: validation
+    attributes:
+      label: Validations
+      description: Before submitting the issue, please make sure you do the following
+      options:
+        - label: Follow our [Code of Conduct](https://github.com/sinksmell/ahaCode/blob/master/CODE_OF_CONDUCT.md)
+          required: true
+        - label: Check that there isn't [already an issue](https://github.com/sinksmell/ahaCode/issues) that reports the same bug to avoid creating a duplicate.
+          required: true
+        - label: Check that this is a concrete bug. For Q&A open a [GitHub Discussion](https://github.com/sinksmell/ahaCode/discussions).
+          required: true

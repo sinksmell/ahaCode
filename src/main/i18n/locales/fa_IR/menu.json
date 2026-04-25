@@ -1,0 +1,95 @@
+{
+  "app": {
+    "label": "ahaCode",
+    "preferences": "تنظیمات",
+    "devtools": "ابزارهای توسعه",
+    "update": "بررسی به‌روزرسانی‌ها...",
+    "quit": "خروج از ahaCode",
+    "about": "درباره ahaCode",
+    "hide": "مخفی کردن ahaCode",
+    "mathNotebook": "Math Notebook"
+  },
+  "help": {
+    "label": "راهنما",
+    "website": "وب‌سایت",
+    "documentation": "مستندات",
+    "viewInGitHub": "مشاهده در GitHub",
+    "changeLog": "تغییرات",
+    "reportIssue": "گزارش مشکل",
+    "giveStar": "دادن ستاره",
+    "extension": {
+      "vscode": "افزونه VS Code",
+      "raycast": "افزونه Raycast",
+      "alfred": "افزونه Alfred"
+    },
+    "donate": {
+      "openCollective": "حمایت مالی در Open Collective",
+      "payPal": "حمایت مالی از طریق PayPal",
+      "gumroad": "حمایت مالی از طریق Gumroad (Visa، Mastercard و غیره)"
+    },
+    "twitter": "X",
+    "devTools": "تغییر وضعیت ابزارهای توسعه",
+    "links": {
+      "snippets": "مجموعه Snippet"
+    }
+  },
+  "view": {
+    "label": "نمایش",
+    "showSidebar": "نمایش/پنهان کردن نوار کناری",
+    "sortBy": {
+      "label": "مرتب‌سازی Snippetها بر اساس",
+      "dateModified": "تاریخ ویرایش",
+      "dateCreated": "تاریخ ایجاد",
+      "name": "نام"
+    },
+    "compactMode": "حالت فشرده",
+    "layout": {
+      "label": "Layout",
+      "allPanels": "All Panels",
+      "listEditor": "List + Editor",
+      "editorOnly": "Editor Only"
+    }
+  },
+  "edit": {
+    "label": "ویرایش",
+    "find": "جستجو"
+  },
+  "editor": {
+    "label": "ویرایشگر",
+    "copy": "کپی Snippet به کلیپ‌بورد",
+    "format": "قالب‌بندی",
+    "previewCode": "پیش‌نمایش کد",
+    "previewScreenshot": "پیش‌نمایش تصویر",
+    "previewJson": "پیش‌نمایش JSON",
+    "fontSizeIncrease": "افزایش اندازه فونت",
+    "fontSizeDecrease": "کاهش اندازه فونت",
+    "fontSizeReset": "بازنشانی اندازه فونت",
+    "mode": "Mode",
+    "modeRaw": "Raw",
+    "modeLivePreview": "Live Preview",
+    "modePreview": "Preview"
+  },
+  "markdown": {
+    "label": "Markdown",
+    "preview": "پیش‌نمایش",
+    "previewMarkdown": "پیش‌نمایش Markdown",
+    "presentationMode": "حالت ارائه",
+    "previewMindmap": "پیش‌نمایش نقشه ذهنی"
+  },
+  "history": {
+    "label": "تاریخچه",
+    "back": "عقب",
+    "forward": "جلو"
+  },
+  "devtools": {
+    "label": "ابزارهای توسعه"
+  },
+  "window": {
+    "label": "Window",
+    "minimize": "Minimize"
+  },
+  "file": {
+    "label": "File",
+    "new": "New"
+  }
+}

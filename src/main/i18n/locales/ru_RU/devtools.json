@@ -1,0 +1,243 @@
+{
+  "label": "Инструменты разработчика",
+  "generators": {
+    "label": "Генераторы",
+    "lorem": {
+      "label": "Lorem Ipsum генератор",
+      "description": "Генерация текста-заполнителя",
+      "selectType": "Выберите тип",
+      "maxCount": "Максимум {{count}}",
+      "types": {
+        "words": "Слова",
+        "sentences": "Предложения",
+        "paragraphs": "Параграфы"
+      }
+    },
+    "json": {
+      "label": "JSON генератор",
+      "description": "Генерация случайных JSON данных с различными типами полей",
+      "fields": "Поля",
+      "fieldName": "Имя поля",
+      "selectType": "Выберите тип",
+      "addField": "Добавить поле",
+      "rowCount": "Количество строк",
+      "maxRows": "Максимум 1000",
+      "categories": {
+        "general": "Общие",
+        "person": "Персона",
+        "internet": "Интернет",
+        "location": "Локация",
+        "finance": "Финансы",
+        "commerce": "Торговля",
+        "company": "Компания",
+        "lorem": "Lorem",
+        "date": "Дата",
+        "number": "Число",
+        "phone": "Телефон",
+        "image": "Изображение"
+      },
+      "types": {
+        "rowNumber": "Номер строки",
+        "firstName": "Имя",
+        "lastName": "Фамилия",
+        "fullName": "Полное имя",
+        "gender": "Пол",
+        "jobTitle": "Должность",
+        "email": "Email адрес",
+        "username": "Имя пользователя",
+        "password": "Пароль",
+        "url": "URL",
+        "ipv4": "IP адрес v4",
+        "ipv6": "IP адрес v6",
+        "userAgent": "User Agent",
+        "city": "Город",
+        "country": "Страна",
+        "streetAddress": "Адрес",
+        "zipCode": "Почтовый индекс",
+        "latitude": "Широта",
+        "longitude": "Долгота",
+        "amount": "Сумма",
+        "currencyCode": "Код валюты",
+        "creditCardNumber": "Номер кредитной карты",
+        "productName": "Название товара",
+        "price": "Цена",
+        "department": "Отдел",
+        "companyName": "Название компании",
+        "catchPhrase": "Слоган",
+        "word": "Слово",
+        "sentence": "Предложение",
+        "paragraph": "Параграф",
+        "past": "Прошедшая дата",
+        "future": "Будущая дата",
+        "recent": "Недавняя дата",
+        "birthdate": "Дата рождения",
+        "int": "Целое число",
+        "float": "Дробное число",
+        "boolean": "Булево",
+        "phoneNumber": "Номер телефона",
+        "imei": "IMEI",
+        "avatar": "URL аватара",
+        "imageUrl": "URL изображения"
+      }
+    }
+  },
+  "converters": {
+    "label": "Конвертеры",
+    "caseConverter": {
+      "label": "Конвертер регистра",
+      "description": "Преобразование текста в различные регистры",
+      "caseType": {
+        "uppercase": "Uppercase",
+        "lowercase": "Lowercase",
+        "camelcase": "Camelcase",
+        "capitalize": "Capitalize",
+        "constantcase": "Constantcase",
+        "snakecase": "Snakecase",
+        "kebabcase": "Kebabcase",
+        "pascalcase": "Pascalcase",
+        "dotcase": "Dotcase",
+        "pathcase": "Pathcase"
+      }
+    },
+    "textToUnicode": {
+      "label": "Текст в Unicode",
+      "description": "Конвертация текста в Unicode и обратно",
+      "modes": {
+        "textToUnicode": "Текст → Unicode",
+        "unicodeToText": "Unicode → Текст"
+      }
+    },
+    "textToAscii": {
+      "label": "Текст в ASCII Binary",
+      "description": "Конвертация текста в ASCII binary и обратно",
+      "modes": {
+        "textToAscii": "Текст → ASCII",
+        "asciiToText": "ASCII → Текст"
+      }
+    },
+    "base64": {
+      "label": "Base64 Encoder / Decoder",
+      "description": "Кодирование или декодирование текста в Base64",
+      "modes": {
+        "textToBase64": "Текст → Base64",
+        "base64ToText": "Base64 → Текст"
+      }
+    },
+    "jsonToYaml": {
+      "label": "JSON в YAML",
+      "description": "Конвертация JSON в YAML и обратно",
+      "modes": {
+        "jsonToYaml": "JSON → YAML",
+        "yamlToJson": "YAML → JSON"
+      }
+    },
+    "jsonToToml": {
+      "label": "JSON в TOML",
+      "description": "Конвертация JSON в TOML и обратно",
+      "modes": {
+        "jsonToToml": "JSON → TOML",
+        "tomlToJson": "TOML → JSON"
+      }
+    },
+    "jsonToXml": {
+      "label": "JSON в XML",
+      "description": "Конвертация JSON в XML и обратно",
+      "modes": {
+        "jsonToXml": "JSON → XML",
+        "xmlToJson": "XML → JSON"
+      }
+    },
+    "colorConverter": {
+      "label": "Конвертер цветов",
+      "description": "Конвертация цветов между различными форматами"
+    }
+  },
+  "crypto": {
+    "label": "Криптография / Безопасность",
+    "hash": {
+      "label": "Генератор хешей",
+      "description": "Генерация хешей из текста"
+    },
+    "hmac": {
+      "label": "HMAC Генератор",
+      "description": "Генерация кода аутентификации сообщений на основе хеша (HMAC) из ключа и сообщения"
+    },
+    "password": {
+      "label": "Генератор паролей",
+      "description": "Генерация безопасного пароля"
+    },
+    "uuid": {
+      "label": "UUID Генератор",
+      "description": "Генерация универсального уникального идентификатора (UUID)"
+    }
+  },
+  "web": {
+    "label": "Веб",
+    "urlParser": {
+      "label": "URL Парсер",
+      "description": "Разбор URL на компоненты"
+    },
+    "urlEncoder": {
+      "label": "URL Encoder / Decoder",
+      "description": "Кодирование или декодирование URL",
+      "modes": {
+        "urlEncode": "URL Encode",
+        "urlDecode": "URL Decode"
+      }
+    },
+    "slugify": {
+      "label": "Slugify",
+      "description": "Преобразование текста в URL-совместимый slug"
+    }
+  },
+  "compare": {
+    "label": "Сравнение",
+    "jsonDiff": {
+      "label": "JSON Diff",
+      "description": "Сравнение и визуализация различий между двумя JSON-документами",
+      "original": "Исходный",
+      "modified": "Изменённый",
+      "filters": {
+        "added": "Добавлено",
+        "removed": "Удалено",
+        "modified": "Изменено"
+      },
+      "empty": "Вставьте JSON в оба поля, чтобы увидеть различия",
+      "errors": {
+        "invalidJson": "Невалидный JSON",
+        "diffFailed": "Не удалось вычислить diff"
+      }
+    }
+  },
+  "form": {
+    "input": "Ввод",
+    "output": "Вывод",
+    "inputString": "Входная строка",
+    "outputString": "Выходная строка",
+    "inputUrl": "Входной URL",
+    "outputUrl": "Выходной URL",
+    "parsedUrl": "Разобранный URL",
+    "splitQueryString": "Разделить Query String",
+    "key": "Ключ",
+    "value": "Значение",
+    "component": "Компонент",
+    "result": "Результат",
+    "secretKey": "Секретный ключ",
+    "algorithm": "Алгоритм",
+    "version": "Версия",
+    "amount": "Количество",
+    "type": "Тип",
+    "length": "Длина",
+    "options": "Опции",
+    "numbers": "Числа",
+    "symbols": "Символы",
+    "lowercase": "Строчные",
+    "uppercase": "Заглавные",
+    "placeholder": {
+      "text": "Введите текст",
+      "value": "Введите значение",
+      "secretKey": "Введите секретный ключ",
+      "url": "Введите URL"
+    }
+  }
+}

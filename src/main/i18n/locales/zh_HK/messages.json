@@ -1,0 +1,45 @@
+{
+  "confirm": {
+    "delete": "您確定要刪除 \"{{name}}\" 嗎？",
+    "deletePermanently": "您確定要永久刪除 \"{{name}}\" 嗎？",
+    "deleteConfirmMultipleSnippets": "您確定要永久刪除已選擇的 {{count}} 個程式碼片段嗎？",
+    "emptyTrash": "您確定要永久刪除回收桶中的所有程式碼片段嗎？",
+    "migrateToMarkdown": [
+      "Migrate to Markdown Vault?",
+      "The selected vault will be overwritten with the current SQLite library."
+    ]
+  },
+  "success": {
+    "copied": "已複製",
+    "migrateToMarkdown": "Migrated to Markdown Vault. Folders: {{folders}}, snippets: {{snippets}}, tags: {{tags}}.",
+    "vaultLoaded": "Vault successfully loaded."
+  },
+  "warning": {
+    "noUndo": "此操作無法撤消。",
+    "allSnippetsMoveToTrash": "此資料夾中的所有程式碼片段將被移至回收桶。",
+    "deleteTag": "這也將導致所有帶有該標籤的程式碼片段移除此標籤。",
+    "createDb": "請選擇其他資料夾",
+    "htmlCssPreview": "添加HTML片段以查看結果。添加CSS進行樣式設計，添加JavaScript實現互動功能。",
+    "codeBlockRenderer": [
+      "使用 Codemirror 時，程式碼區塊設置的語言必須對應",
+      "languages"
+    ]
+  },
+  "error": {
+    "migration": "Auto-migration from SQLite failed: {{error}}"
+  },
+  "description": {
+    "storageVault": "Choose the vault directory. To sync between devices, select a folder in iCloud Drive, Google Drive or Dropbox.",
+    "language": "To apply language changes, you need to reload the app.",
+    "migrateSqliteUtility": "If you have a massCode.db file from a previous version, use this utility to import your data into the current Markdown Vault."
+  },
+  "special": {
+    "supportMessage": "ahaCode is a free, open-source fork of massCode under AGPL-3.0. If you find it useful, please {{-tagStart}}star the repo{{-tagEnd}} to support development.",
+    "unsponsored": "未贊助"
+  },
+  "release": {},
+  "update": {
+    "available": "版本 {{newVersion}} 現已可供下載。\n您的版本是 {{oldVersion}}。",
+    "noAvailable": "目前沒有可用的更新。"
+  }
+}

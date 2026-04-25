@@ -1,0 +1,155 @@
+{
+  "common": {
+    "total": "Total",
+    "inbox": "Inbox",
+    "favorites": "Favorite",
+    "trash": "Coș de Gunoi",
+    "folders": "Foldere",
+    "tags": "Tags",
+    "library": "Bibliotecă",
+    "fragment": "Fragment"
+  },
+  "spaces": {
+    "label": "Spaces",
+    "code": {
+      "label": "Code",
+      "tooltip": "Code snippets",
+      "title": "Code Snippets",
+      "allSnippets": "Toate Snippets"
+    },
+    "notes": {
+      "label": "Notes",
+      "tooltip": "Notes",
+      "title": "Notes",
+      "allNotes": "All Notes"
+    },
+    "math": {
+      "label": "Math",
+      "tooltip": "Math notebook",
+      "title": "Math Notebook",
+      "sheetList": "Sheet List",
+      "newSheet": "New Sheet",
+      "untitled": "Untitled",
+      "currencyUnavailable": "Currency rates service unavailable"
+    },
+    "tools": {
+      "label": "Tools",
+      "tooltip": "Developer tools"
+    }
+  },
+  "snippet": {
+    "untitled": "Snippet fără titlu",
+    "selectedMultiple": "{{count}} Snippets Selectate",
+    "noSelected": "Niciun Snippet Selectat"
+  },
+  "notes": {
+    "untitled": "Untitled note",
+    "plural": "Notes",
+    "words": "Words",
+    "symbols": "Symbols",
+    "selectedMultiple": "{{count}} Notes Selected",
+    "noSelected": "No Note Selected"
+  },
+  "folder": {
+    "untitled": "Folder fără titlu"
+  },
+  "button": {
+    "back": "Înapoi",
+    "cancel": "Anulare",
+    "confirm": "Confirmă",
+    "copy": "Copiază",
+    "fit": "Potrivește",
+    "saveAs": "Salvează ca",
+    "update": [
+      "Mergi la GitHub",
+      "OK"
+    ],
+    "zoomIn": "Mărește",
+    "zoomOut": "Micșorează",
+    "darkMode": "Mod Întunecat",
+    "toggleDarkMode": "Comută modul întunecat",
+    "background": "Fundal",
+    "goToDownload": "Mergi la Descărcare",
+    "goToSettings": "Go to Settings",
+    "refreshPreview": "Reîmprospătează previzualizarea",
+    "laserPointer": "Pointer laser",
+    "fullscreen": "Ecran complet",
+    "prev": "Anterior",
+    "next": "Următor"
+  },
+  "action": {
+    "close": "Închide",
+    "defaultLanguage": "Limbaj Implicit",
+    "duplicate": "Duplică",
+    "rename": "Redenumește",
+    "restore": "Restaurează",
+    "setCustomIcon": "Setează Iconiță",
+    "removeCustomIcon": "Elimină Iconița",
+    "show": "Arată",
+    "hide": "Ascunde",
+    "showSidebar": "Afișează bara laterală",
+    "hideSidebar": "Ascunde bara laterală",
+    "showSidebarAndList": "Show Sidebar and List",
+    "hideSidebarAndList": "Hide Sidebar and List",
+    "new": {
+      "storage": "Storage Nou",
+      "folder": "Folder Nou",
+      "snippet": "Snippet Nou",
+      "fragment": "Fragment Nou",
+      "note": "New Note"
+    },
+    "add": {
+      "description": "Adaugă Descriere",
+      "tag": "Adaugă Tag",
+      "toFavorites": "Adaugă la Favorite"
+    },
+    "open": {
+      "storage": "Deschide Storage"
+    },
+    "move": {
+      "storage": "Mută Storage",
+      "toTrash": "Mută la Coșul de Gunoi"
+    },
+    "remove": {
+      "fromFavorites": "Elimină din Favorite"
+    },
+    "reveal": {
+      "inFinder": "Reveal in Finder",
+      "inFileManager": "Show in File Manager"
+    },
+    "reload": {
+      "storage": "Reîncarcă Storage",
+      "app": "Reload ahaCode"
+    },
+    "delete": {
+      "common": "Șterge",
+      "now": "Șterge Acum",
+      "allData": "Șterge Toate Datele",
+      "trash": "Golește Coșul de Gunoi"
+    },
+    "migrate": {
+      "fromSnippetsLab": "Din SnippetsLab",
+      "fromV3": "Din massCode v3"
+    },
+    "export": {
+      "toHtml": "Exportă în HTML"
+    },
+    "copy": {
+      "snippetLink": "Copiază Link-ul Snippet-ului"
+    },
+    "select": {
+      "directory": "Select Directory"
+    }
+  },
+  "placeholder": {
+    "emptyTagList": "Adăugați tags la snippets pentru a le vedea aici",
+    "emptyNotesTagList": "Add tags to notes to see them here",
+    "emptyFoldersList": "Fără foldere",
+    "emptySnippetsList": "Fără fragmente",
+    "emptyNotesList": "No Notes",
+    "searchNotes": "Search notes...",
+    "emptySheetList": "No Sheets",
+    "search": "Caută",
+    "addTag": "Adaugă Tag"
+  }
+}

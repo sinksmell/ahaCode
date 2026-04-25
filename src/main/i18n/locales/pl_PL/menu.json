@@ -1,0 +1,95 @@
+{
+  "app": {
+    "label": "ahaCode",
+    "preferences": "Preferencje",
+    "devtools": "Narzędzia deweloperskie",
+    "update": "Sprawdź aktualizacje...",
+    "quit": "Zakończ ahaCode",
+    "about": "O ahaCode",
+    "hide": "Ukryj ahaCode",
+    "mathNotebook": "Math Notebook"
+  },
+  "help": {
+    "label": "Pomoc",
+    "website": "Strona internetowa",
+    "documentation": "Dokumentacja",
+    "viewInGitHub": "Zobacz na GitHub",
+    "changeLog": "Lista zmian",
+    "reportIssue": "Zgłoś problem",
+    "giveStar": "Dodaj gwiazdkę",
+    "extension": {
+      "vscode": "Rozszerzenie VS Code",
+      "raycast": "Rozszerzenie Raycast",
+      "alfred": "Rozszerzenie Alfred"
+    },
+    "donate": {
+      "openCollective": "Wesprzyj przez Open Collective",
+      "payPal": "Wesprzyj przez PayPal",
+      "gumroad": "Wesprzyj przez Gumroad (Visa, Mastercard, itp.)"
+    },
+    "twitter": "X",
+    "devTools": "Przełącz narzędzia deweloperskie",
+    "links": {
+      "snippets": "Kolekcja fragmentów"
+    }
+  },
+  "view": {
+    "label": "Widok",
+    "showSidebar": "Pokaż/ukryj pasek boczny",
+    "sortBy": {
+      "label": "Sortuj fragmenty według",
+      "dateModified": "Data modyfikacji",
+      "dateCreated": "Data utworzenia",
+      "name": "Nazwa"
+    },
+    "compactMode": "Tryb kompaktowy",
+    "layout": {
+      "label": "Layout",
+      "allPanels": "All Panels",
+      "listEditor": "List + Editor",
+      "editorOnly": "Editor Only"
+    }
+  },
+  "edit": {
+    "label": "Edycja",
+    "find": "Znajdź"
+  },
+  "editor": {
+    "label": "Edytor",
+    "copy": "Kopiuj fragment do schowka",
+    "format": "Formatuj",
+    "previewCode": "Podgląd kodu",
+    "previewScreenshot": "Podgląd zrzutu ekranu",
+    "previewJson": "Podgląd JSON",
+    "fontSizeIncrease": "Zwiększ rozmiar czcionki",
+    "fontSizeDecrease": "Zmniejsz rozmiar czcionki",
+    "fontSizeReset": "Resetuj rozmiar czcionki",
+    "mode": "Mode",
+    "modeRaw": "Raw",
+    "modeLivePreview": "Live Preview",
+    "modePreview": "Preview"
+  },
+  "markdown": {
+    "label": "Markdown",
+    "preview": "Podgląd",
+    "previewMarkdown": "Podgląd Markdown",
+    "presentationMode": "Tryb prezentacji",
+    "previewMindmap": "Podgląd mapy myśli"
+  },
+  "history": {
+    "label": "Historia",
+    "back": "Wstecz",
+    "forward": "Dalej"
+  },
+  "devtools": {
+    "label": "Narzędzia deweloperskie"
+  },
+  "window": {
+    "label": "Window",
+    "minimize": "Minimize"
+  },
+  "file": {
+    "label": "File",
+    "new": "New"
+  }
+}

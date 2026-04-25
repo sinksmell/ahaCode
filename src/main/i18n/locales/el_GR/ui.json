@@ -1,0 +1,155 @@
+{
+  "common": {
+    "total": "Σύνολο",
+    "inbox": "Εισερχόμενα",
+    "favorites": "Αγαπημένα",
+    "trash": "Κάδος",
+    "folders": "Φάκελοι",
+    "tags": "Tags",
+    "library": "Βιβλιοθήκη",
+    "fragment": "Fragment"
+  },
+  "spaces": {
+    "label": "Spaces",
+    "code": {
+      "label": "Code",
+      "tooltip": "Code snippets",
+      "title": "Code Snippets",
+      "allSnippets": "Όλα τα Snippets"
+    },
+    "notes": {
+      "label": "Notes",
+      "tooltip": "Notes",
+      "title": "Notes",
+      "allNotes": "All Notes"
+    },
+    "math": {
+      "label": "Math",
+      "tooltip": "Math notebook",
+      "title": "Math Notebook",
+      "sheetList": "Sheet List",
+      "newSheet": "New Sheet",
+      "untitled": "Untitled",
+      "currencyUnavailable": "Currency rates service unavailable"
+    },
+    "tools": {
+      "label": "Tools",
+      "tooltip": "Developer tools"
+    }
+  },
+  "snippet": {
+    "untitled": "Snippet χωρίς τίτλο",
+    "selectedMultiple": "{{count}} Επιλεγμένα Snippets",
+    "noSelected": "Δεν έχει επιλεγεί Snippet"
+  },
+  "notes": {
+    "untitled": "Untitled note",
+    "plural": "Notes",
+    "words": "Words",
+    "symbols": "Symbols",
+    "selectedMultiple": "{{count}} Notes Selected",
+    "noSelected": "No Note Selected"
+  },
+  "folder": {
+    "untitled": "Φάκελος χωρίς τίτλο"
+  },
+  "button": {
+    "back": "Πίσω",
+    "cancel": "Ακύρωση",
+    "confirm": "Επιβεβαίωση",
+    "copy": "Αντιγραφή",
+    "fit": "Προσαρμογή",
+    "saveAs": "Αποθήκευση ως",
+    "update": [
+      "Μετάβαση στο GitHub",
+      "OK"
+    ],
+    "zoomIn": "Μεγέθυνση",
+    "zoomOut": "Σμίκρυνση",
+    "darkMode": "Σκοτεινή Λειτουργία",
+    "toggleDarkMode": "Εναλλαγή σκοτεινής λειτουργίας",
+    "background": "Φόντο",
+    "goToDownload": "Μετάβαση στη Λήψη",
+    "goToSettings": "Go to Settings",
+    "refreshPreview": "Ανανέωση προεπισκόπησης",
+    "laserPointer": "Δείκτης λέιζερ",
+    "fullscreen": "Πλήρης οθόνη",
+    "prev": "Προηγούμενο",
+    "next": "Επόμενο"
+  },
+  "action": {
+    "close": "Κλείσιμο",
+    "defaultLanguage": "Προεπιλεγμένη Γλώσσα",
+    "duplicate": "Αντίγραφο",
+    "rename": "Μετονομασία",
+    "restore": "Επαναφορά",
+    "setCustomIcon": "Ορισμός Εικονιδίου",
+    "removeCustomIcon": "Αφαίρεση Εικονιδίου",
+    "show": "Εμφάνιση",
+    "hide": "Απόκρυψη",
+    "showSidebar": "Εμφάνιση πλευρικής γραμμής",
+    "hideSidebar": "Απόκρυψη πλευρικής γραμμής",
+    "showSidebarAndList": "Show Sidebar and List",
+    "hideSidebarAndList": "Hide Sidebar and List",
+    "new": {
+      "storage": "Νέο Storage",
+      "folder": "Νέος Φάκελος",
+      "snippet": "Νέο Snippet",
+      "fragment": "Νέο Fragment",
+      "note": "New Note"
+    },
+    "add": {
+      "description": "Προσθήκη Περιγραφής",
+      "tag": "Προσθήκη Tag",
+      "toFavorites": "Προσθήκη στα Αγαπημένα"
+    },
+    "open": {
+      "storage": "Άνοιγμα Storage"
+    },
+    "move": {
+      "storage": "Μετακίνηση Storage",
+      "toTrash": "Μετακίνηση στον Κάδο"
+    },
+    "remove": {
+      "fromFavorites": "Αφαίρεση από τα Αγαπημένα"
+    },
+    "reveal": {
+      "inFinder": "Reveal in Finder",
+      "inFileManager": "Show in File Manager"
+    },
+    "reload": {
+      "storage": "Επαναφόρτωση Storage",
+      "app": "Reload ahaCode"
+    },
+    "delete": {
+      "common": "Διαγραφή",
+      "now": "Διαγραφή Τώρα",
+      "allData": "Διαγραφή Όλων των Δεδομένων",
+      "trash": "Άδειασμα Κάδου"
+    },
+    "migrate": {
+      "fromSnippetsLab": "Από SnippetsLab",
+      "fromV3": "Από massCode v3"
+    },
+    "export": {
+      "toHtml": "Εξαγωγή σε HTML"
+    },
+    "copy": {
+      "snippetLink": "Αντιγραφή Συνδέσμου Snippet"
+    },
+    "select": {
+      "directory": "Select Directory"
+    }
+  },
+  "placeholder": {
+    "emptyTagList": "Προσθέστε tags στα snippets για να τα δείτε εδώ",
+    "emptyNotesTagList": "Add tags to notes to see them here",
+    "emptyFoldersList": "Κανένας φάκελος",
+    "emptySnippetsList": "Κανένα απόσπασμα",
+    "emptyNotesList": "No Notes",
+    "searchNotes": "Search notes...",
+    "emptySheetList": "No Sheets",
+    "search": "Αναζήτηση",
+    "addTag": "Προσθήκη Tag"
+  }
+}

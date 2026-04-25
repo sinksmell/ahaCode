@@ -1,0 +1,45 @@
+{
+  "confirm": {
+    "delete": "Ви впевнені, що хочете видалити \"{{name}}\"?",
+    "deletePermanently": "Ви впевнені, що хочете назавжди видалити \"{{name}}\"?",
+    "deleteConfirmMultipleSnippets": "Ви впевнені, що хочете назавжди видалити {{count}} вибраних сніпетів?",
+    "emptyTrash": "Ви впевнені, що хочете назавжди видалити всі сніпети у Кошику?",
+    "migrateToMarkdown": [
+      "Migrate to Markdown Vault?",
+      "The selected vault will be overwritten with the current SQLite library."
+    ]
+  },
+  "success": {
+    "copied": "Скопійовано в буфер обміну",
+    "migrateToMarkdown": "Migrated to Markdown Vault. Folders: {{folders}}, snippets: {{snippets}}, tags: {{tags}}.",
+    "vaultLoaded": "Vault successfully loaded."
+  },
+  "warning": {
+    "noUndo": "Ви не зможете скасувати цю дію.",
+    "allSnippetsMoveToTrash": "Всі сніпети в цій папці будуть переміщені до кошика.",
+    "deleteTag": "Це також призведе до видалення цього тегу з усіх сніпетів.",
+    "createDb": "Будь ласка, виберіть іншу папку",
+    "htmlCssPreview": "Додайте HTML-фрагмент, щоб побачити результат. Додайте CSS для стилізації та JavaScript для інтерактивності.",
+    "codeBlockRenderer": [
+      "При використанні Codemirror мова для блоку коду повинна відповідати одному зі значень",
+      "languages"
+    ]
+  },
+  "error": {
+    "migration": "Auto-migration from SQLite failed: {{error}}"
+  },
+  "description": {
+    "storageVault": "Choose the vault directory. To sync between devices, select a folder in iCloud Drive, Google Drive or Dropbox.",
+    "language": "To apply language changes, you need to reload the app.",
+    "migrateSqliteUtility": "If you have a massCode.db file from a previous version, use this utility to import your data into the current Markdown Vault."
+  },
+  "special": {
+    "supportMessage": "ahaCode is a free, open-source fork of massCode under AGPL-3.0. If you find it useful, please {{-tagStart}}star the repo{{-tagEnd}} to support development.",
+    "unsponsored": "Без спонсора"
+  },
+  "release": {},
+  "update": {
+    "available": "Версія {{newVersion}} доступна для завантаження.\nВаша версія {{oldVersion}}.",
+    "noAvailable": "На даний момент оновлень немає."
+  }
+}

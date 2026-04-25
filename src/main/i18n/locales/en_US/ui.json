@@ -1,0 +1,239 @@
+{
+  "common": {
+    "total": "Total",
+    "inbox": "Inbox",
+    "favorites": "Favorites",
+    "trash": "Trash",
+    "folders": "Folders",
+    "tags": "Tags",
+    "library": "Library",
+    "fragment": "Fragment"
+  },
+  "spaces": {
+    "label": "Spaces",
+    "code": {
+      "label": "Code",
+      "tooltip": "Code snippets",
+      "title": "Code Snippets",
+      "allSnippets": "All Snippets"
+    },
+    "notes": {
+      "label": "Notes",
+      "tooltip": "Notes",
+      "title": "Notes",
+      "allNotes": "All Notes"
+    },
+    "math": {
+      "label": "Math",
+      "tooltip": "Math notebook",
+      "title": "Math Notebook",
+      "sheetList": "Sheet List",
+      "newSheet": "New Sheet",
+      "untitled": "Untitled",
+      "currencyUnavailable": "Currency rates service unavailable"
+    },
+    "tools": {
+      "label": "Tools",
+      "tooltip": "Developer tools"
+    }
+  },
+  "snippet": {
+    "untitled": "Untitled snippet",
+    "selectedMultiple": "{{count}} Snippets Selected",
+    "noSelected": "No Snippet Selected"
+  },
+  "notes": {
+    "untitled": "Untitled note",
+    "plural": "Notes",
+    "words": "Words",
+    "symbols": "Symbols",
+    "selectedMultiple": "{{count}} Notes Selected",
+    "noSelected": "No Note Selected",
+    "dashboard": {
+      "label": "Dashboard",
+      "title": "Notes Dashboard",
+      "description": "Your notes activity, links, and structure.",
+      "empty": "All dashboard widgets are hidden.",
+      "error": "Failed to load notes dashboard.",
+      "actions": {
+        "refresh": "Refresh",
+        "backToDashboard": "Back to Dashboard",
+        "showAllWidgets": "Show All Widgets"
+      },
+      "widgets": {
+        "title": "Visible Widgets",
+        "description": "Choose which blocks appear on the dashboard.",
+        "stats": "Overview",
+        "activityHeatmap": "Activity Heatmap",
+        "recent": "Recent Notes",
+        "graphPreview": "Notes Graph",
+        "topLinked": "Top Linked Notes"
+      },
+      "stats": {
+        "title": "Overview",
+        "notes": "Notes",
+        "words": "Words",
+        "folders": "Folders",
+        "tags": "Tags"
+      },
+      "activity": {
+        "heatmapTitle": "Activity Heatmap",
+        "heatmapDescription": "Recent note updates by day.",
+        "updatedToday": "Updated Today",
+        "updatedWeek": "Updated in 7 Days",
+        "less": "Less",
+        "more": "More",
+        "totalLastYear": "{{count}} note updates in the last 53 weeks",
+        "tooltipUpdates": "{{count}} note updates"
+      },
+      "recent": {
+        "title": "Recent Notes",
+        "empty": "No recent notes yet."
+      },
+      "graphPreview": {
+        "title": "Notes Graph",
+        "empty": "No links between notes yet."
+      },
+      "topLinked": {
+        "title": "Top Linked Notes",
+        "empty": "No linked notes yet.",
+        "incoming": "{{count}} incoming links"
+      },
+      "graph": {
+        "title": "Notes Graph",
+        "description": "Explore connections between notes and open them in the workspace.",
+        "hint": "Drag to pan, use zoom controls or the mouse wheel, and hover a node to inspect its neighborhood.",
+        "meta": "{{links}} incoming links · {{neighbors}} connected notes",
+        "empty": "No links between notes yet.",
+        "error": "Failed to load notes graph."
+      }
+    }
+  },
+  "folder": {
+    "untitled": "Untitled folder",
+    "iconPicker": {
+      "searchPlaceholder": "Search icons...",
+      "emptyResults": "No icons found",
+      "filters": {
+        "all": "All",
+        "material": "Material",
+        "lucide": "Lucide"
+      }
+    }
+  },
+  "button": {
+    "back": "Back",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "copy": "Copy",
+    "fit": "Fit",
+    "saveAs": "Save as",
+    "update": [
+      "Go to GitHub",
+      "OK"
+    ],
+    "zoomIn": "Zoom In",
+    "zoomOut": "Zoom Out",
+    "darkMode": "Dark Mode",
+    "toggleDarkMode": "Toggle Dark Mode",
+    "background": "Background",
+    "goToDownload": "Go to Download",
+    "goToSettings": "Go to Settings",
+    "refreshPreview": "Refresh Preview",
+    "laserPointer": "Laser Pointer",
+    "fullscreen": "Full Screen",
+    "prev": "Prev",
+    "next": "Next"
+  },
+  "action": {
+    "close": "Close",
+    "defaultLanguage": "Default Language",
+    "duplicate": "Duplicate",
+    "rename": "Rename",
+    "restore": "Restore",
+    "setCustomIcon": "Set Icon",
+    "removeCustomIcon": "Remove Icon",
+    "show": "Show",
+    "hide": "Hide",
+    "showSidebar": "Show Sidebar",
+    "hideSidebar": "Hide Sidebar",
+    "showSidebarAndList": "Show Sidebar and List",
+    "hideSidebarAndList": "Hide Sidebar and List",
+    "new": {
+      "storage": "New Storage",
+      "folder": "New Folder",
+      "snippet": "New Snippet",
+      "fragment": "New Fragment",
+      "note": "New Note"
+    },
+    "add": {
+      "description": "Add Description",
+      "tag": "Add Tag",
+      "toFavorites": "Add to Favorites"
+    },
+    "open": {
+      "storage": "Open Storage"
+    },
+    "move": {
+      "storage": "Move Storage",
+      "toTrash": "Move to Trash"
+    },
+    "remove": {
+      "fromFavorites": "Remove from Favorites"
+    },
+    "reveal": {
+      "inFinder": "Reveal in Finder",
+      "inFileManager": "Show in File Manager"
+    },
+    "reload": {
+      "storage": "Reload Storage",
+      "app": "Reload ahaCode"
+    },
+    "delete": {
+      "common": "Delete",
+      "now": "Delete Now",
+      "allData": "Delete All Data",
+      "trash": "Empty Trash"
+    },
+    "migrate": {
+      "fromSnippetsLab": "From SnippetsLab",
+      "fromV3": "From massCode v3"
+    },
+    "export": {
+      "toHtml": "Export to HTML"
+    },
+    "copy": {
+      "snippetLink": "Copy Snippet Link",
+      "noteLink": "Copy Note Link"
+    },
+    "select": {
+      "directory": "Select Directory"
+    }
+  },
+  "internalLinks": {
+    "picker": {
+      "searchPlaceholder": "Search snippets and notes...",
+      "emptyResults": "No results",
+      "groups": {
+        "snippets": "Snippets",
+        "notes": "Notes"
+      }
+    },
+    "missing": {
+      "snippet": "Snippet not found",
+      "note": "Note not found"
+    }
+  },
+  "placeholder": {
+    "emptyTagList": "Add tags to snippets to see them here",
+    "emptyNotesTagList": "Add tags to notes to see them here",
+    "emptyFoldersList": "No Folders",
+    "emptySnippetsList": "No Snippets",
+    "emptyNotesList": "No Notes",
+    "searchNotes": "Search notes...",
+    "emptySheetList": "No Sheets",
+    "search": "Search",
+    "addTag": "Add Tag",
+    "selectLanguage": "Select Language"
+  }
+}

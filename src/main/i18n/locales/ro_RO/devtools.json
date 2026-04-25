@@ -1,0 +1,224 @@
+{
+  "label": "Instrumente pentru Dezvoltatori",
+  "generators": {
+    "label": "Generatoare",
+    "lorem": {
+      "label": "Generator Lorem Ipsum",
+      "description": "Generează text substituent",
+      "selectType": "Selectează tipul",
+      "maxCount": "Max {{count}}",
+      "types": {
+        "words": "Cuvinte",
+        "sentences": "Propoziții",
+        "paragraphs": "Paragrafe"
+      }
+    },
+    "json": {
+      "label": "Generator JSON",
+      "description": "Generează date JSON aleatorii cu diferite tipuri de câmpuri",
+      "fields": "Câmpuri",
+      "fieldName": "Nume câmp",
+      "selectType": "Selectează tipul",
+      "addField": "Adaugă câmp",
+      "rowCount": "Număr de rânduri",
+      "maxRows": "Max 1000",
+      "categories": {
+        "general": "General",
+        "person": "Persoană",
+        "internet": "Internet",
+        "location": "Locație",
+        "finance": "Finanțe",
+        "commerce": "Comerț",
+        "company": "Companie",
+        "lorem": "Lorem",
+        "date": "Dată",
+        "number": "Număr",
+        "phone": "Telefon",
+        "image": "Imagine"
+      },
+      "types": {
+        "rowNumber": "Număr rând",
+        "firstName": "Prenume",
+        "lastName": "Nume de familie",
+        "fullName": "Nume complet",
+        "gender": "Gen",
+        "jobTitle": "Titlu job",
+        "email": "Adresă email",
+        "username": "Nume utilizator",
+        "password": "Parolă",
+        "url": "URL",
+        "ipv4": "Adresă IP v4",
+        "ipv6": "Adresă IP v6",
+        "userAgent": "User Agent",
+        "city": "Oraș",
+        "country": "Țară",
+        "streetAddress": "Adresă stradă",
+        "zipCode": "Cod poștal",
+        "latitude": "Latitudine",
+        "longitude": "Longitudine",
+        "amount": "Sumă",
+        "currencyCode": "Cod monedă",
+        "creditCardNumber": "Număr card credit",
+        "productName": "Nume produs",
+        "price": "Preț",
+        "department": "Departament",
+        "companyName": "Nume companie",
+        "catchPhrase": "Slogan",
+        "word": "Cuvânt",
+        "sentence": "Propoziție",
+        "paragraph": "Paragraf",
+        "past": "Dată trecută",
+        "future": "Dată viitoare",
+        "recent": "Dată recentă",
+        "birthdate": "Dată naștere",
+        "int": "Întreg",
+        "float": "Zecimal",
+        "boolean": "Boolean",
+        "phoneNumber": "Număr telefon",
+        "imei": "IMEI",
+        "avatar": "URL avatar",
+        "imageUrl": "URL imagine"
+      }
+    }
+  },
+  "converters": {
+    "label": "Convertoare",
+    "caseConverter": {
+      "label": "Convertor de Majuscule",
+      "description": "Transformă textul în diferite formate de majuscule",
+      "caseType": {
+        "uppercase": "Uppercase",
+        "lowercase": "Lowercase",
+        "camelcase": "Camelcase",
+        "capitalize": "Capitalize",
+        "constantcase": "Constantcase",
+        "snakecase": "Snakecase",
+        "kebabcase": "Kebabcase",
+        "pascalcase": "Pascalcase",
+        "dotcase": "Dotcase",
+        "pathcase": "Pathcase"
+      }
+    },
+    "textToUnicode": {
+      "label": "Text în Unicode",
+      "description": "Convertește textul în Unicode și invers",
+      "modes": {
+        "textToUnicode": "Text → Unicode",
+        "unicodeToText": "Unicode → Text"
+      }
+    },
+    "textToAscii": {
+      "label": "Text în ASCII Binary",
+      "description": "Convertește textul în ASCII binary și invers",
+      "modes": {
+        "textToAscii": "Text → ASCII",
+        "asciiToText": "ASCII → Text"
+      }
+    },
+    "base64": {
+      "label": "Base64 Encoder / Decoder",
+      "description": "Codifică sau decodifică textul în Base64",
+      "modes": {
+        "textToBase64": "Text → Base64",
+        "base64ToText": "Base64 → Text"
+      }
+    },
+    "jsonToYaml": {
+      "label": "JSON în YAML",
+      "description": "Convertește JSON în YAML și invers",
+      "modes": {
+        "jsonToYaml": "JSON → YAML",
+        "yamlToJson": "YAML → JSON"
+      }
+    },
+    "jsonToToml": {
+      "label": "JSON în TOML",
+      "description": "Convertește JSON în TOML și invers",
+      "modes": {
+        "jsonToToml": "JSON → TOML",
+        "tomlToJson": "TOML → JSON"
+      }
+    },
+    "jsonToXml": {
+      "label": "JSON în XML",
+      "description": "Convertește JSON în XML și invers",
+      "modes": {
+        "jsonToXml": "JSON → XML",
+        "xmlToJson": "XML → JSON"
+      }
+    },
+    "colorConverter": {
+      "label": "Convertor de Culori",
+      "description": "Convertește culorile între diferite formate"
+    }
+  },
+  "crypto": {
+    "label": "Criptografie / Securitate",
+    "hash": {
+      "label": "Generator Hash",
+      "description": "Generează hash-uri din text"
+    },
+    "hmac": {
+      "label": "Generator HMAC",
+      "description": "Generează cod de autentificare a mesajului bazat pe hash (HMAC) compus dintr-o cheie și un mesaj"
+    },
+    "password": {
+      "label": "Generator de Parole",
+      "description": "Generează o parolă sigură"
+    },
+    "uuid": {
+      "label": "Generator UUID",
+      "description": "Generează un identificator unic universal (UUID)"
+    }
+  },
+  "web": {
+    "label": "Web",
+    "urlParser": {
+      "label": "Analizor URL",
+      "description": "Analizează un URL în componentele sale"
+    },
+    "urlEncoder": {
+      "label": "URL Encoder / Decoder",
+      "description": "Codifică sau decodifică URL",
+      "modes": {
+        "urlEncode": "URL Encode",
+        "urlDecode": "URL Decode"
+      }
+    },
+    "slugify": {
+      "label": "Slugify",
+      "description": "Convertește textul într-un slug prietenos cu URL"
+    }
+  },
+  "form": {
+    "input": "Intrare",
+    "output": "Ieșire",
+    "inputString": "Șir de Intrare",
+    "outputString": "Șir de Ieșire",
+    "inputUrl": "URL de Intrare",
+    "outputUrl": "URL de Ieșire",
+    "parsedUrl": "URL Analizat",
+    "splitQueryString": "Împarte Query String",
+    "key": "Cheie",
+    "value": "Valoare",
+    "component": "Componentă",
+    "result": "Rezultat",
+    "secretKey": "Cheie Secretă",
+    "algorithm": "Algoritm",
+    "version": "Versiune",
+    "amount": "Cantitate",
+    "type": "Tip",
+    "length": "Lungime",
+    "options": "Opțiuni",
+    "numbers": "Numere",
+    "symbols": "Simboluri",
+    "lowercase": "Minuscule",
+    "uppercase": "Majuscule",
+    "placeholder": {
+      "text": "Introduceți un text",
+      "value": "Introduceți o valoare",
+      "secretKey": "Introduceți o cheie secretă",
+      "url": "Introduceți un URL"
+    }
+  }
+}

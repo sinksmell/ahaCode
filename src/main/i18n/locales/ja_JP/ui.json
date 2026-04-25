@@ -1,0 +1,155 @@
+{
+  "common": {
+    "total": "合計",
+    "inbox": "受信トレイ",
+    "favorites": "お気に入り",
+    "trash": "ゴミ箱",
+    "folders": "フォルダ",
+    "tags": "タグ",
+    "library": "ライブラリ",
+    "fragment": "フラグメント"
+  },
+  "spaces": {
+    "label": "Spaces",
+    "code": {
+      "label": "Code",
+      "tooltip": "Code snippets",
+      "title": "Code Snippets",
+      "allSnippets": "すべてのスニペット"
+    },
+    "notes": {
+      "label": "Notes",
+      "tooltip": "Notes",
+      "title": "Notes",
+      "allNotes": "All Notes"
+    },
+    "math": {
+      "label": "Math",
+      "tooltip": "Math notebook",
+      "title": "Math Notebook",
+      "sheetList": "Sheet List",
+      "newSheet": "New Sheet",
+      "untitled": "Untitled",
+      "currencyUnavailable": "Currency rates service unavailable"
+    },
+    "tools": {
+      "label": "Tools",
+      "tooltip": "Developer tools"
+    }
+  },
+  "snippet": {
+    "untitled": "無題のスニペット",
+    "selectedMultiple": "{{count}}個のスニペットを選択",
+    "noSelected": "スニペットが選択されていません"
+  },
+  "notes": {
+    "untitled": "Untitled note",
+    "plural": "Notes",
+    "words": "Words",
+    "symbols": "Symbols",
+    "selectedMultiple": "{{count}} Notes Selected",
+    "noSelected": "No Note Selected"
+  },
+  "folder": {
+    "untitled": "無題のフォルダ"
+  },
+  "button": {
+    "back": "戻る",
+    "cancel": "キャンセル",
+    "confirm": "確認",
+    "copy": "コピー",
+    "fit": "フィット",
+    "saveAs": "名前を付けて保存",
+    "update": [
+      "GitHubへ移動",
+      "OK"
+    ],
+    "zoomIn": "拡大",
+    "zoomOut": "縮小",
+    "darkMode": "ダークモード",
+    "toggleDarkMode": "ダークモードの切り替え",
+    "background": "背景",
+    "goToDownload": "ダウンロードへ",
+    "goToSettings": "Go to Settings",
+    "refreshPreview": "プレビューを更新",
+    "laserPointer": "レーザーポインター",
+    "fullscreen": "フルスクリーン",
+    "prev": "前へ",
+    "next": "次へ"
+  },
+  "action": {
+    "close": "閉じる",
+    "defaultLanguage": "デフォルト言語",
+    "duplicate": "複製",
+    "rename": "名前変更",
+    "restore": "復元",
+    "setCustomIcon": "アイコンを設定",
+    "removeCustomIcon": "アイコンを削除",
+    "show": "表示",
+    "hide": "非表示",
+    "showSidebar": "サイドバーを表示",
+    "hideSidebar": "サイドバーを非表示",
+    "showSidebarAndList": "Show Sidebar and List",
+    "hideSidebarAndList": "Hide Sidebar and List",
+    "new": {
+      "storage": "新規ストレージ",
+      "folder": "新規フォルダ",
+      "snippet": "新規スニペット",
+      "fragment": "新規フラグメント",
+      "note": "New Note"
+    },
+    "add": {
+      "description": "説明を追加",
+      "tag": "タグを追加",
+      "toFavorites": "お気に入りに追加"
+    },
+    "open": {
+      "storage": "ストレージを開く"
+    },
+    "move": {
+      "storage": "ストレージを移動",
+      "toTrash": "ゴミ箱へ移動"
+    },
+    "remove": {
+      "fromFavorites": "お気に入りから削除"
+    },
+    "reveal": {
+      "inFinder": "Reveal in Finder",
+      "inFileManager": "Show in File Manager"
+    },
+    "reload": {
+      "storage": "ストレージを再読み込み",
+      "app": "Reload ahaCode"
+    },
+    "delete": {
+      "common": "削除",
+      "now": "今すぐ削除",
+      "allData": "すべてのデータを削除",
+      "trash": "ゴミ箱を空にする"
+    },
+    "migrate": {
+      "fromSnippetsLab": "SnippetsLabから",
+      "fromV3": "massCode v3から"
+    },
+    "export": {
+      "toHtml": "HTMLにエクスポート"
+    },
+    "copy": {
+      "snippetLink": "スニペットリンクをコピー"
+    },
+    "select": {
+      "directory": "Select Directory"
+    }
+  },
+  "placeholder": {
+    "emptyTagList": "タグを追加するとここに表示されます",
+    "emptyNotesTagList": "Add tags to notes to see them here",
+    "emptyFoldersList": "フォルダーなし",
+    "emptySnippetsList": "スニペットなし",
+    "emptyNotesList": "No Notes",
+    "searchNotes": "Search notes...",
+    "emptySheetList": "No Sheets",
+    "search": "検索",
+    "addTag": "タグを追加"
+  }
+}

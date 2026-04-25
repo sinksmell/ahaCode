@@ -1,0 +1,45 @@
+{
+  "confirm": {
+    "delete": "Είστε βέβαιοι ότι θέλετε να διαγράψετε το \"{{name}}\"?",
+    "deletePermanently": "Είστε βέβαιοι ότι θέλετε να διαγράψετε οριστικά το \"{{name}}\"?",
+    "deleteConfirmMultipleSnippets": "Είστε βέβαιοι ότι θέλετε να διαγράψετε οριστικά τα {{count}} επιλεγμένα snippets;",
+    "emptyTrash": "Είστε βέβαιοι ότι θέλετε να διαγράψετε οριστικά όλα τα snippets στον Κάδο Απορριμμάτων;",
+    "migrateToMarkdown": [
+      "Migrate to Markdown Vault?",
+      "The selected vault will be overwritten with the current SQLite library."
+    ]
+  },
+  "success": {
+    "copied": "Αντιγράφηκε στο πρόχειρο",
+    "migrateToMarkdown": "Migrated to Markdown Vault. Folders: {{folders}}, snippets: {{snippets}}, tags: {{tags}}.",
+    "vaultLoaded": "Vault successfully loaded."
+  },
+  "warning": {
+    "noUndo": "Δεν μπορείτε να αναιρέσετε αυτήν την ενέργεια.",
+    "allSnippetsMoveToTrash": "Όλα τα snippets σε αυτόν τον φάκελο θα μεταφερθούν στον κάδο απορριμμάτων.",
+    "deleteTag": "Αυτό θα προκαλέσει επίσης την αφαίρεση αυτού του tag από όλα τα snippets.",
+    "createDb": "Παρακαλώ επιλέξτε άλλο φάκελο",
+    "htmlCssPreview": "Προσθέστε ένα τμήμα HTML για να δείτε το αποτέλεσμα. Προσθέστε CSS για στυλ και JavaScript για διαδραστικότητα.",
+    "codeBlockRenderer": [
+      "Όταν χρησιμοποιείτε το Codemirror, η γλώσσα που θα οριστεί για το code block πρέπει να αντιστοιχεί σε μία από τις τιμές των",
+      "languages"
+    ]
+  },
+  "error": {
+    "migration": "Auto-migration from SQLite failed: {{error}}"
+  },
+  "description": {
+    "storageVault": "Choose the vault directory. To sync between devices, select a folder in iCloud Drive, Google Drive or Dropbox.",
+    "language": "To apply language changes, you need to reload the app.",
+    "migrateSqliteUtility": "If you have a massCode.db file from a previous version, use this utility to import your data into the current Markdown Vault."
+  },
+  "special": {
+    "supportMessage": "ahaCode is a free, open-source fork of massCode under AGPL-3.0. If you find it useful, please {{-tagStart}}star the repo{{-tagEnd}} to support development.",
+    "unsponsored": "Χωρίς χορηγία"
+  },
+  "release": {},
+  "update": {
+    "available": "Η έκδοση {{newVersion}} είναι διαθέσιμη για λήψη.\nΗ έκδοσή σας είναι {{oldVersion}}.",
+    "noAvailable": "Δεν υπάρχουν διαθέσιμες ενημερώσεις αυτή τη στιγμή."
+  }
+}

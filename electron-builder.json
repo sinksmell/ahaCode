@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json.schemastore.org/electron-builder",
+  "appId": "io.ahacode.app",
+  "productName": "ahaCode",
+  "directories": {
+    "output": "dist"
+  },
+  "files": [
+    "build/renderer/**/*",
+    "build/main/**/*",
+    "build/shared/**/*",
+    "!build/**/*.map",
+    "!build/models/**/*"
+  ],
+  "extraResources": [
+    {
+      "from": "build/models",
+      "to": "models",
+      "filter": ["**/*"]
+    }
+  ],
+  "asarUnpack": [
+    "node_modules/better-sqlite3/**/*",
+    "node_modules/sqlite-vec/**/*",
+    "node_modules/sqlite-vec-*/**/*",
+    "node_modules/onnxruntime-node/**/*"
+  ],
+  "mac": {
+    "target": "dmg",
+    "icon": "build/icons/icon.icns",
+    "entitlements": "build/entitlements.mac.inherit.plist",
+    "category": "public.app-category.productivity",
+    "hardenedRuntime": true,
+    "identity": null
+  },
+  "win": {
+    "target": ["nsis", "portable"],
+    "icon": "build/icons/icon.ico"
+  },
+  "linux": {
+    "target": ["AppImage"],
+    "icon": "build/icons/icon.png"
+  },
+  "nsis": {
+    "oneClick": false,
+    "perMachine": false,
+    "allowToChangeInstallationDirectory": true,
+    "shortcutName": "ahaCode",
+    "artifactName": "${productName}-${version}-${arch}.${ext}"
+  },
+  "portable": {
+    "artifactName": "${productName}-${version}-${arch}-portable.${ext}"
+  },
+  "protocols": [
+    {
+      "name": "ahaCode",
+      "schemes": ["ahacode"]
+    }
+  ]
+}

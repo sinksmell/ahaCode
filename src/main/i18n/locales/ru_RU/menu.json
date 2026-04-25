@@ -1,0 +1,94 @@
+{
+  "app": {
+    "label": "ahaCode",
+    "preferences": "Настройки",
+    "devtools": "Инструменты разработчика",
+    "update": "Проверить обновления...",
+    "quit": "Выйти из ahaCode",
+    "about": "О ahaCode",
+    "hide": "Скрыть ahaCode",
+    "mathNotebook": "Математический блокнот"
+  },
+  "help": {
+    "label": "Помощь",
+    "website": "Веб-сайт",
+    "documentation": "Документация",
+    "viewInGitHub": "Открыть на GitHub",
+    "changeLog": "История изменений",
+    "reportIssue": "Сообщить о проблеме",
+    "giveStar": "Поставить звезду",
+    "extension": {
+      "vscode": "Расширение VS Code",
+      "raycast": "Расширение Raycast",
+      "alfred": "Расширение Alfred"
+    },
+    "donate": {
+      "openCollective": "Поддержать через Open Collective",
+      "payPal": "Поддержать через PayPal",
+      "gumroad": "Поддержать через Gumroad (Visa, Mastercard и др.)"
+    },
+    "twitter": "X",
+    "devTools": "Инструменты разработчика",
+    "links": {
+      "snippets": "Коллекция сниппетов"
+    }
+  },
+  "file": {
+    "label": "Файл",
+    "new": "Создать"
+  },
+  "view": {
+    "label": "Вид",
+    "showSidebar": "Показать/скрыть боковую панель",
+    "layout": {
+      "label": "Макет",
+      "allPanels": "Все панели",
+      "listEditor": "Список + редактор",
+      "editorOnly": "Только редактор"
+    },
+    "sortBy": {
+      "label": "Сортировать сниппеты по",
+      "dateModified": "Дате изменения",
+      "dateCreated": "Дате создания",
+      "name": "Имени"
+    },
+    "compactMode": "Компактный список"
+  },
+  "edit": {
+    "label": "Правка",
+    "find": "Найти"
+  },
+  "editor": {
+    "label": "Редактор",
+    "copy": "Копировать сниппет в буфер обмена",
+    "format": "Форматировать",
+    "mode": "Режим",
+    "modeRaw": "Исходный",
+    "modeLivePreview": "Живой предпросмотр",
+    "modePreview": "Предпросмотр",
+    "previewCode": "Предпросмотр кода",
+    "previewScreenshot": "Предпросмотр скриншота",
+    "previewJson": "Предпросмотр JSON",
+    "fontSizeIncrease": "Увеличить размер шрифта",
+    "fontSizeDecrease": "Уменьшить размер шрифта",
+    "fontSizeReset": "Сбросить размер шрифта"
+  },
+  "markdown": {
+    "preview": "Предпросмотр",
+    "previewMarkdown": "Предпросмотр Markdown",
+    "presentationMode": "Режим презентации",
+    "previewMindmap": "Предпросмотр диаграммы связей"
+  },
+  "history": {
+    "label": "История",
+    "back": "Назад",
+    "forward": "Вперед"
+  },
+  "devtools": {
+    "label": "Инструменты разработчика"
+  },
+  "window": {
+    "label": "Окно",
+    "minimize": "Свернуть"
+  }
+}
