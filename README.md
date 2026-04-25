@@ -95,13 +95,19 @@ pnpm build:linux
 ## Troubleshooting
 
 <details>
-<summary>macOS: "ahaCode is damaged and can't be opened"</summary>
+<summary>macOS: "ahaCode cannot be opened because the developer cannot be verified"</summary>
 
-This is caused by macOS Gatekeeper for unsigned builds. Fix with either:
+ahaCode builds are ad-hoc signed (no paid Apple Developer ID), so Gatekeeper shows a warning on first launch. Bypass it once with any of:
+
+**Right-click → Open** (easiest)
+1. In Finder, right-click (or Control-click) `ahaCode.app`
+2. Choose **Open**
+3. Click **Open** in the dialog. After this the app launches normally every time.
 
 **System Settings (macOS 13+)**
-1. Open **System Settings** → **Privacy & Security**
-2. Find "ahaCode" and click **Allow Anyway**
+1. Try to open the app once (it will be blocked)
+2. Open **System Settings** → **Privacy & Security**
+3. Scroll to the bottom, find the ahaCode block, click **Open Anyway**
 
 **Terminal**
 ```bash
