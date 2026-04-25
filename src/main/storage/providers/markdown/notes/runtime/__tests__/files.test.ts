@@ -22,23 +22,23 @@ function createTempNotesRoot(): string {
 }
 
 describe('listNoteMarkdownFiles', () => {
-  it('includes files from .masscode/inbox', () => {
+  it('includes files from .ahacode/inbox', () => {
     const root = createTempNotesRoot()
     const inboxDir = path.join(root, '.ahacode', 'inbox')
     fs.ensureDirSync(inboxDir)
     fs.writeFileSync(path.join(inboxDir, 'note1.md'), '---\nid: 1\n---\n')
     const files = listNoteMarkdownFiles(root)
-    expect(files).toContain('.masscode/inbox/note1.md')
+    expect(files).toContain('.ahacode/inbox/note1.md')
     fs.removeSync(root)
   })
 
-  it('includes files from .masscode/trash', () => {
+  it('includes files from .ahacode/trash', () => {
     const root = createTempNotesRoot()
     const trashDir = path.join(root, '.ahacode', 'trash')
     fs.ensureDirSync(trashDir)
     fs.writeFileSync(path.join(trashDir, 'deleted.md'), '---\nid: 2\n---\n')
     const files = listNoteMarkdownFiles(root)
-    expect(files).toContain('.masscode/trash/deleted.md')
+    expect(files).toContain('.ahacode/trash/deleted.md')
     fs.removeSync(root)
   })
 

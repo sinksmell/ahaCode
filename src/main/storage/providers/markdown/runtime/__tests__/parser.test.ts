@@ -18,7 +18,7 @@ function createSnippet(value: string): MarkdownSnippet {
     ],
     createdAt: 1,
     description: null,
-    filePath: '.masscode/inbox/Test.md',
+    filePath: '.ahacode/inbox/Test.md',
     folderId: null,
     id: 1,
     isDeleted: 0,

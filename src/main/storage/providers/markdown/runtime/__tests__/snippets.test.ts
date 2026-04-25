@@ -93,7 +93,7 @@ describe('readSnippetFromFile', () => {
       vi.setSystemTime(new Date('2026-03-18T19:40:00.000Z'))
 
       const paths = createPaths()
-      const relativePath = '.masscode/inbox/legacy-date-snippet.md'
+      const relativePath = '.ahacode/inbox/legacy-date-snippet.md'
       const absolutePath = path.join(paths.vaultPath, relativePath)
       const createdAtIso = '2026-03-18T10:00:00.000Z'
       const updatedAtIso = '2026-03-18T11:00:00.000Z'
@@ -139,7 +139,7 @@ describe('readSnippetFromFile', () => {
 
     try {
       const paths = createPaths()
-      const relativePath = '.masscode/inbox/plain.md'
+      const relativePath = '.ahacode/inbox/plain.md'
       const absolutePath = path.join(paths.vaultPath, relativePath)
       fs.ensureDirSync(path.dirname(absolutePath))
       fs.writeFileSync(absolutePath, '# Plain markdown snippet', 'utf8')

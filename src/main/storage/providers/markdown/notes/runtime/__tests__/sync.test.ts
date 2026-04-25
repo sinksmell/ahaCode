@@ -144,7 +144,7 @@ describe('syncNotesFoldersWithDisk', () => {
 })
 
 describe('syncNotesWithDisk', () => {
-  it('includes notes from .masscode/inbox after sync', () => {
+  it('includes notes from .ahacode/inbox after sync', () => {
     const paths = createNotesPaths()
     fs.ensureDirSync(paths.inboxDirPath)
     fs.writeFileSync(
@@ -155,10 +155,10 @@ describe('syncNotesWithDisk', () => {
     const state = createDefaultNotesState()
     syncNotesWithDisk(paths, state)
     expect(state.notes).toHaveLength(1)
-    expect(state.notes[0].filePath).toBe('.masscode/inbox/inbox-note.md')
+    expect(state.notes[0].filePath).toBe('.ahacode/inbox/inbox-note.md')
   })
 
-  it('includes notes from .masscode/trash after sync', () => {
+  it('includes notes from .ahacode/trash after sync', () => {
     const paths = createNotesPaths()
     fs.ensureDirSync(paths.trashDirPath)
     fs.writeFileSync(
@@ -169,7 +169,7 @@ describe('syncNotesWithDisk', () => {
     const state = createDefaultNotesState()
     syncNotesWithDisk(paths, state)
     expect(state.notes).toHaveLength(1)
-    expect(state.notes[0].filePath).toBe('.masscode/trash/deleted-note.md')
+    expect(state.notes[0].filePath).toBe('.ahacode/trash/deleted-note.md')
   })
 
   it('does not include files from .git', () => {

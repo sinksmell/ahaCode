@@ -54,12 +54,12 @@ describe('deleteEntityFromStateAndDisk', () => {
     )
 
     const stateEntities = [
-      { filePath: '.masscode/inbox/one.md', id: 1 },
-      { filePath: '.masscode/inbox/two.md', id: 2 },
+      { filePath: '.ahacode/inbox/one.md', id: 1 },
+      { filePath: '.ahacode/inbox/two.md', id: 2 },
     ]
     const runtimeEntities = [
-      { filePath: '.masscode/inbox/one.md', id: 1 },
-      { filePath: '.masscode/inbox/two.md', id: 2 },
+      { filePath: '.ahacode/inbox/one.md', id: 1 },
+      { filePath: '.ahacode/inbox/two.md', id: 2 },
     ]
 
     const result = deleteEntityFromStateAndDisk({
@@ -267,9 +267,9 @@ describe('getEntityDeleteCounts', () => {
 describe('emptyEntityTrashFromStateAndDisk', () => {
   it('returns deletedCount=0 when trash is empty', () => {
     const rootPath = createTempRoot()
-    const stateEntities = [{ filePath: '.masscode/inbox/one.md', id: 1 }]
+    const stateEntities = [{ filePath: '.ahacode/inbox/one.md', id: 1 }]
     const runtimeEntities = [
-      { filePath: '.masscode/inbox/one.md', id: 1, isDeleted: 0 },
+      { filePath: '.ahacode/inbox/one.md', id: 1, isDeleted: 0 },
     ]
 
     const result = emptyEntityTrashFromStateAndDisk({
@@ -295,12 +295,12 @@ describe('emptyEntityTrashFromStateAndDisk', () => {
     )
 
     const stateEntities = [
-      { filePath: '.masscode/inbox/keep.md', id: 1 },
-      { filePath: '.masscode/trash/drop.md', id: 2 },
+      { filePath: '.ahacode/inbox/keep.md', id: 1 },
+      { filePath: '.ahacode/trash/drop.md', id: 2 },
     ]
     const runtimeEntities = [
-      { filePath: '.masscode/inbox/keep.md', id: 1, isDeleted: 0 },
-      { filePath: '.masscode/trash/drop.md', id: 2, isDeleted: 1 },
+      { filePath: '.ahacode/inbox/keep.md', id: 1, isDeleted: 0 },
+      { filePath: '.ahacode/trash/drop.md', id: 2, isDeleted: 1 },
     ]
 
     const result = emptyEntityTrashFromStateAndDisk({
