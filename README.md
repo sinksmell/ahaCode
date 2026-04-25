@@ -15,6 +15,10 @@
   <img alt="platforms" src="https://img.shields.io/badge/platforms-macOS%20%7C%20Windows%20%7C%20Linux-lightgrey">
 </p>
 
+<p align="center">
+  <img src="./docs/website/public/preview.png" alt="ahaCode preview" width="900">
+</p>
+
 ---
 
 ## About this fork
