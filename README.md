@@ -5,7 +5,7 @@
 <h1 align="center">ahaCode</h1>
 
 <p align="center">
-  <strong>A developer workspace for snippets, notes, calculations, and dev tools — all in one local-first app.</strong>
+  <strong>A local-first code snippets manager for developers.</strong>
   <br>
   Your data stays on your machine as plain Markdown files.
 </p>
@@ -46,35 +46,8 @@ A focused snippet workspace with multi-level folders, tags, and fragments for or
 - JSON visualizer for exploring nested structures as interactive graphs
 - Export snippets as images with customizable themes
 
-### Notes
-Longer markdown documents side-by-side with snippets — project docs, drafts, research notes, personal knowledge bases.
-
-- Dashboard with activity overview, recent notes, linked notes, and a notes graph preview
-- Editor / Live Preview / Preview modes
-- Fullscreen notes graph for exploring internal links
-- Integrated [Mermaid](https://mermaid-js.github.io/mermaid/) diagrams
-- Mind maps generated from markdown heading structure
-- Fullscreen presentation mode
-- Callout blocks and image embedding
-
-### Math notebook
-A calculator-style notebook for natural-language calculations, conversions, and date math.
-
-- Arithmetic, percentages, unit conversions, date/time math
-- Variables, functions, aggregates
-- Finance calculations (compound interest, ROI, loan repayment)
-
-### Developer tools
-Built-in utilities that usually send you to a browser tab:
-
-- **Compare**: JSON diff
-- **Text**: case converter, slug generator, URL parser
-- **Crypto**: hash/HMAC generator, password generator, UUID
-- **Encoders**: URL, Base64, JSON to TOML/XML/YAML, color converter
-- **Generators**: JSON generator, Lorem Ipsum
-
 ### Markdown vault
-Your snippets and notes live as plain `.md` files on disk with YAML frontmatter. The data is readable, portable, and yours.
+Your snippets live as plain `.md` files on disk with YAML frontmatter. The data is readable, portable, and yours.
 
 - **Git-friendly** — track changes and sync via any Git remote
 - **Cloud sync** — works with iCloud, Dropbox, Google Drive, Syncthing

@@ -1,7 +1,7 @@
 {
   "name": "ahacode",
   "version": "5.1.1",
-  "description": "ahaCode — a developer workspace for snippets, notes, math, and dev tools (AGPL fork of massCode)",
+  "description": "ahaCode — a local-first code snippets manager for developers (AGPL fork of massCode)",
   "author": {
     "name": "sinksmell",
     "url": "https://github.com/sinksmell"
