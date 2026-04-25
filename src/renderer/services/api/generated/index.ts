@@ -469,7 +469,7 @@ export class HttpClient<SecurityDataType = unknown> {
 
 /**
  * @title ahaCode API
- * @version 5.1.1
+ * @version 0.1.0
  *
  * Development documentation
  */
