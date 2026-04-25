@@ -16,7 +16,7 @@
 </p>
 
 <p align="center">
-  <img src="./docs/website/public/preview.png" alt="ahaCode preview" width="900">
+  <img src="./docs/website/public/preview.jpeg" alt="ahaCode preview" width="900">
 </p>
 
 ---
