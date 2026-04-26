@@ -12,11 +12,11 @@ const downloadUrl = `https://github.com/sinksmell/ahaCode/releases/download/${ta
 
 const assets = {
   version,
-  mac: `${downloadUrl}/ahaCode-${version}.dmg`,
   macM1: `${downloadUrl}/ahaCode-${version}-arm64.dmg`,
   win: `${downloadUrl}/ahaCode-${version}-x64.exe`,
   winPortable: `${downloadUrl}/ahaCode-${version}-x64-portable.exe`,
   linux: `${downloadUrl}/ahaCode-${version}.AppImage`,
+  releasePage: `https://github.com/sinksmell/ahaCode/releases/tag/${tagName}`,
 }
 
 const dist = join(__dirname, '../.vitepress/_data')

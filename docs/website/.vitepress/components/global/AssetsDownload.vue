@@ -11,15 +11,7 @@ import assets from '../../_data/assets.json'
     text="Download for Apple Silicon"
   />
 
-  <p>macOS 11.0+</p>
-
-  <VPButton
-    :href="assets.mac"
-    theme="brand"
-    text="Download for Intel"
-  />
-
-  <p>macOS 10.13+</p>
+  <p>macOS 11.0+ (Apple Silicon)</p>
 
   <h2>Windows</h2>
 
@@ -48,4 +40,9 @@ import assets from '../../_data/assets.json'
   />
 
   <p>Ubuntu</p>
+
+  <p style="margin-top: 24px">
+    Looking for another platform?
+    <a :href="assets.releasePage">View all releases on GitHub →</a>
+  </p>
 </template>
