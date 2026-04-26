@@ -1,6 +1,6 @@
 ---
 title: Code Tags
-description: "Use tags in massCode to organize snippets across folders, add tag filters, and manage tag deletion safely."
+description: "Use tags in ahaCode to organize snippets across folders, add tag filters, and manage tag deletion safely."
 ---
 
 # Tags

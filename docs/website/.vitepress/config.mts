@@ -1,11 +1,9 @@
 import { defineConfig, type HeadConfig } from 'vitepress'
 import { version } from './_data/assets.json'
 
-const siteUrl = 'https://masscode.io'
-const siteTitle = 'massCode'
-const description = 'Free, open-source developer workspace with code snippets, markdown notes, math notebook, and built-in dev tools.'
+const siteUrl = 'https://sinksmell.github.io/ahaCode'
+const siteTitle = 'ahaCode'
 const ogImage = `${siteUrl}/og-image.png`
-const gsv = 'h-rU1tSutO83wOyvi4syrk_XTvgennlUPkL6fMmq5cI'
 
 function resolvePagePath(relativePath: string) {
   if (!relativePath || relativePath === 'index.md')
@@ -52,9 +50,70 @@ function buildSeoHead({
   ]
 }
 
+const enSidebar = [
+  {
+    text: 'General',
+    items: [
+      { text: 'Overview', link: '/documentation/' },
+      { text: 'Storage', link: '/documentation/storage' },
+      { text: 'Sync', link: '/documentation/sync' },
+      { text: 'Themes', link: '/documentation/themes' },
+    ],
+  },
+  {
+    text: 'Code',
+    items: [
+      { text: 'Library', link: '/documentation/code/library' },
+      { text: 'Folders', link: '/documentation/code/folders' },
+      { text: 'Tags', link: '/documentation/code/tags' },
+      { text: 'Snippets', link: '/documentation/code/snippets' },
+      { text: 'Fragments', link: '/documentation/code/fragments' },
+      { text: 'Description', link: '/documentation/code/description' },
+      { text: 'Search', link: '/documentation/code/search' },
+    ],
+  },
+  {
+    text: 'AI',
+    items: [
+      { text: 'MCP Server', link: '/documentation/ai/' },
+    ],
+  },
+]
+
+const zhSidebar = [
+  {
+    text: '通用',
+    items: [
+      { text: '概览', link: '/zh/documentation/' },
+      { text: '存储', link: '/zh/documentation/storage' },
+      { text: '同步', link: '/zh/documentation/sync' },
+      { text: '主题', link: '/zh/documentation/themes' },
+    ],
+  },
+  {
+    text: '代码',
+    items: [
+      { text: '资料库', link: '/zh/documentation/code/library' },
+      { text: '文件夹', link: '/zh/documentation/code/folders' },
+      { text: '标签', link: '/zh/documentation/code/tags' },
+      { text: '代码片段', link: '/zh/documentation/code/snippets' },
+      { text: '片段', link: '/zh/documentation/code/fragments' },
+      { text: '描述', link: '/zh/documentation/code/description' },
+      { text: '搜索', link: '/zh/documentation/code/search' },
+    ],
+  },
+  {
+    text: 'AI',
+    items: [
+      { text: 'MCP 服务', link: '/zh/documentation/ai/' },
+    ],
+  },
+]
+
 export default defineConfig({
   title: siteTitle,
-  description,
+  description: 'Free, open-source code snippets manager with Markdown vault storage, AI-powered search via MCP, and local-first design.',
+  base: '/ahaCode/',
 
   sitemap: {
     hostname: siteUrl,
@@ -64,8 +123,7 @@ export default defineConfig({
   },
 
   head: [
-    ['link', { rel: 'icon', type: 'image/png', href: '/logo-64w.png' }],
-    ['meta', { name: 'google-site-verification', content: gsv }],
+    ['link', { rel: 'icon', type: 'image/png', href: '/ahaCode/logo-64w.png' }],
   ],
 
   transformHead({ pageData, title, description }) {
@@ -77,99 +135,71 @@ export default defineConfig({
     })
   },
 
+  locales: {
+    root: {
+      label: 'English',
+      lang: 'en-US',
+    },
+    zh: {
+      label: '简体中文',
+      lang: 'zh-CN',
+      description: '免费开源的代码片段管理器，基于 Markdown 存储，支持 MCP 协议的 AI 语义搜索，数据完全本地化。',
+      themeConfig: {
+        nav: [
+          { text: '文档', link: '/zh/documentation/' },
+          {
+            text: version,
+            items: [
+              { text: '下载', link: '/zh/download/' },
+              { text: '更新日志', link: 'https://github.com/sinksmell/ahaCode/releases' },
+            ],
+          },
+        ],
+        sidebar: {
+          '/zh/documentation/': zhSidebar,
+        },
+        editLink: {
+          pattern: 'https://github.com/sinksmell/ahaCode/edit/master/docs/website/:path',
+          text: '在 GitHub 上编辑此页',
+        },
+        footer: {
+          message: 'ahaCode 基于 AGPL v3 协议发布。Fork 自 <a href="https://github.com/massCodeIO/massCode">massCode</a>。',
+          copyright: 'Copyright © 2024-present ahaCode Contributors',
+        },
+      },
+    },
+  },
+
   themeConfig: {
     logo: '/logo-64w.png',
 
     nav: [
       { text: 'Documentation', link: '/documentation/' },
-      { text: 'Donate', link: '/donate/' },
       {
         text: version,
         items: [
           { text: 'Download', link: '/download/' },
-          { text: 'Change Log', link: 'https://github.com/massCodeIO/massCode/releases' },
+          { text: 'Change Log', link: 'https://github.com/sinksmell/ahaCode/releases' },
         ],
       },
     ],
 
     sidebar: {
-      '/documentation/': [
-        {
-          text: 'General',
-          items: [
-            { text: 'Overview', link: '/documentation/' },
-            { text: 'Storage', link: '/documentation/storage' },
-            { text: 'Sync', link: '/documentation/sync' },
-            { text: 'Themes', link: '/documentation/themes' },
-          ],
-        },
-        {
-          text: 'Code',
-          items: [
-            { text: 'Library', link: '/documentation/code/library' },
-            { text: 'Folders', link: '/documentation/code/folders' },
-            { text: 'Tags', link: '/documentation/code/tags' },
-            { text: 'Snippets', link: '/documentation/code/snippets' },
-            { text: 'Fragments', link: '/documentation/code/fragments' },
-            { text: 'Description', link: '/documentation/code/description' },
-            { text: 'Search', link: '/documentation/code/search' },
-          ],
-        },
-        {
-          text: 'Notes',
-          items: [
-            { text: 'Notes', link: '/documentation/notes/' },
-            { text: 'Dashboard', link: '/documentation/notes/dashboard' },
-            { text: 'Library', link: '/documentation/notes/library' },
-            { text: 'Folders', link: '/documentation/notes/folders' },
-            { text: 'Tags', link: '/documentation/notes/tags' },
-            { text: 'Internal Links', link: '/documentation/notes/internal-links' },
-            { text: 'Mermaid', link: '/documentation/notes/mermaid' },
-            { text: 'Mindmap', link: '/documentation/notes/mindmap' },
-            { text: 'Presentation', link: '/documentation/notes/presentation' },
-            { text: 'Search', link: '/documentation/notes/search' },
-          ],
-        },
-        {
-          text: 'Math',
-          items: [
-            { text: 'Math Notebook', link: '/documentation/math/' },
-          ],
-        },
-        {
-          text: 'Tools',
-          items: [
-            { text: 'Overview', link: '/documentation/tools/' },
-            { text: 'JSON Diff', link: '/documentation/tools/json-diff' },
-          ],
-        },
-      ],
+      '/documentation/': enSidebar,
     },
 
     socialLinks: [
-      { icon: 'twitter', link: 'https://twitter.com/anton_reshetov' },
-      { icon: 'github', link: 'https://github.com/massCodeIO/massCode' },
+      { icon: 'github', link: 'https://github.com/sinksmell/ahaCode' },
     ],
 
     footer: {
-      message: 'massCode released under the AGPL v3 License.<br>Snippet collection released under the CC-BY-4.0 License.',
-      copyright: 'Copyright © 2019-present Anton Reshetov',
+      message: 'ahaCode released under the AGPL v3 License. Forked from <a href="https://github.com/massCodeIO/massCode">massCode</a>.',
+      copyright: 'Copyright © 2024-present ahaCode Contributors',
     },
 
     editLink: {
-      pattern: 'https://github.com/massCodeIO/massCode/edit/main/docs/website/:path',
+      pattern: 'https://github.com/sinksmell/ahaCode/edit/master/docs/website/:path',
       text: 'Edit this page on GitHub',
-    },
-
-    carbonAds: {
-      code: 'CE7DEKQM',
-      placement: 'masscodeio',
-    },
-
-    algolia: {
-      appId: '92Q94XIWQY',
-      apiKey: '2d71b8791faff1435f75479ffbea2f2e',
-      indexName: 'masscode',
     },
   },
 })

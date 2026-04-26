@@ -1,6 +1,6 @@
 ---
 title: Code Search
-description: "Search the entire massCode snippet library by title or content to quickly find saved code across folders."
+description: "Search the entire ahaCode snippet library by title or content to quickly find saved code across folders."
 ---
 
 # Search

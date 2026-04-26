@@ -1,6 +1,6 @@
 ---
 title: Code Snippets
-description: "Save, organize, and edit reusable code snippets in massCode with folders, languages, and searchable snippet content."
+description: "Save, organize, and edit reusable code snippets in ahaCode with folders, languages, and searchable snippet content."
 ---
 
 # Snippets
@@ -44,7 +44,7 @@ Use one of these methods:
 
 ## Formatting Snippet
 
-Use Prettier to format supported snippet languages without leaving massCode.
+Use Prettier to format supported snippet languages without leaving ahaCode.
 
 Use one of these methods:
 
@@ -71,7 +71,7 @@ Use one of these methods:
 
 <AppVersion text=">=2.9" />
 
-Use code preview when you want to test a small HTML/CSS idea directly inside massCode.
+Use code preview when you want to test a small HTML/CSS idea directly inside ahaCode.
 
 - Add a new [snippet](#adding-a-snippet) or select an existing one.
 - Add a second [fragment](/documentation/code/fragments.html).
@@ -82,7 +82,7 @@ Use code preview when you want to test a small HTML/CSS idea directly inside mas
 
 <AppVersion text=">=4.1" />
 
-Use JSON Visualizer when nested JSON is too dense to read comfortably as raw text. massCode turns the current JSON snippet into a visual graph, so objects, arrays, and relationships are easier to scan.
+Use JSON Visualizer when nested JSON is too dense to read comfortably as raw text. ahaCode turns the current JSON snippet into a visual graph, so objects, arrays, and relationships are easier to scan.
 
 - Add a new [snippet](#adding-a-snippet) or select an existing one.
 - Click the language selector in the editor footer and choose **"JSON"**.

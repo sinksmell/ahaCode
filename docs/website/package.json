@@ -1,8 +1,8 @@
 {
-  "name": "masscode-docs",
+  "name": "ahacode-docs",
   "version": "0.1.0",
   "private": true,
-  "description": "massCode documentation website",
+  "description": "ahaCode documentation website",
   "scripts": {
     "dev": "vitepress dev",
     "build": "vitepress build",

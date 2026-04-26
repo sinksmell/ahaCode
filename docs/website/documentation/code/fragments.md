@@ -1,6 +1,6 @@
 ---
 title: Snippet Fragments
-description: "Use snippet fragments in massCode to keep multiple related files, languages, or versions together in one snippet."
+description: "Use snippet fragments in ahaCode to keep multiple related files, languages, or versions together in one snippet."
 ---
 
 # Fragments

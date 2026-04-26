@@ -1,6 +1,6 @@
 ---
 title: Snippet Descriptions
-description: "Add descriptions to massCode snippets to store usage notes, caveats, links, and extra context next to your code."
+description: "Add descriptions to ahaCode snippets to store usage notes, caveats, links, and extra context next to your code."
 ---
 
 # Description

@@ -1,8 +1,8 @@
 {
-  "version": "4.7.1",
-  "mac": "https://github.com/massCodeIO/massCode/releases/download/v4.7.1/massCode-4.7.1.dmg",
-  "macM1": "https://github.com/massCodeIO/massCode/releases/download/v4.7.1/massCode-4.7.1-arm64.dmg",
-  "win": "https://github.com/massCodeIO/massCode/releases/download/v4.7.1/massCode-4.7.1-x64.exe",
-  "winPortable": "https://github.com/massCodeIO/massCode/releases/download/v4.7.1/massCode-4.7.1-x64-portable.exe",
-  "linux": "https://github.com/massCodeIO/massCode/releases/download/v4.7.1/massCode-4.7.1.AppImage"
+  "version": "0.1.0",
+  "mac": "https://github.com/sinksmell/ahaCode/releases/download/v0.1.0/ahaCode-0.1.0.dmg",
+  "macM1": "https://github.com/sinksmell/ahaCode/releases/download/v0.1.0/ahaCode-0.1.0-arm64.dmg",
+  "win": "https://github.com/sinksmell/ahaCode/releases/download/v0.1.0/ahaCode-0.1.0-x64.exe",
+  "winPortable": "https://github.com/sinksmell/ahaCode/releases/download/v0.1.0/ahaCode-0.1.0-x64-portable.exe",
+  "linux": "https://github.com/sinksmell/ahaCode/releases/download/v0.1.0/ahaCode-0.1.0.AppImage"
 }

@@ -1,6 +1,6 @@
 ---
 title: Code Library
-description: "Browse the Code Library in massCode, including Inbox, Favorites, All Snippets, and Trash for fast snippet navigation."
+description: "Browse the Code Library in ahaCode, including Inbox, Favorites, All Snippets, and Trash for fast snippet navigation."
 ---
 
 # Library

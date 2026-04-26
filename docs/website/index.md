@@ -1,15 +1,15 @@
 ---
 layout: home
-titleTemplate: "A free and open source developer workspace"
-description: "Free, open-source developer workspace for code snippets, markdown notes, calculations, and built-in dev tools. Works offline and stores data locally."
+titleTemplate: "A free and open source code snippets manager"
+description: "Free, open-source code snippets manager with Markdown vault storage, AI-powered search via MCP, and local-first design."
 hero:
   image:
     src: /logo.png
-    alt: massCode
-  name: massCode
-  text: Your developer workspace
+    alt: ahaCode
+  name: ahaCode
+  text: Your code snippets manager
   tagline: |
-    Manage code snippets, write markdown notes, solve calculations, and use built-in developer tools. Free, open source, and works offline.
+    Organize and search code snippets with folders, tags, and AI-powered semantic search. Free, open source, local-first, and Markdown-based.
   actions:
     - theme: brand
       text: Download Free

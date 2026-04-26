@@ -8,15 +8,15 @@ const pkg = JSON.parse(readFileSync(join(__dirname, '../../../package.json'), 'u
 
 const version = pkg.version
 const tagName = `v${version}`
-const downloadUrl = `https://github.com/massCodeIO/massCode/releases/download/${tagName}`
+const downloadUrl = `https://github.com/sinksmell/ahaCode/releases/download/${tagName}`
 
 const assets = {
   version,
-  mac: `${downloadUrl}/massCode-${version}.dmg`,
-  macM1: `${downloadUrl}/massCode-${version}-arm64.dmg`,
-  win: `${downloadUrl}/massCode-${version}-x64.exe`,
-  winPortable: `${downloadUrl}/massCode-${version}-x64-portable.exe`,
-  linux: `${downloadUrl}/massCode-${version}.AppImage`,
+  mac: `${downloadUrl}/ahaCode-${version}.dmg`,
+  macM1: `${downloadUrl}/ahaCode-${version}-arm64.dmg`,
+  win: `${downloadUrl}/ahaCode-${version}-x64.exe`,
+  winPortable: `${downloadUrl}/ahaCode-${version}-x64-portable.exe`,
+  linux: `${downloadUrl}/ahaCode-${version}.AppImage`,
 }
 
 const dist = join(__dirname, '../.vitepress/_data')
