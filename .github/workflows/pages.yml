@@ -38,6 +38,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile --ignore-scripts
 
+      - name: Install docs dependencies
+        run: pnpm --dir docs/website install --frozen-lockfile
+
       - name: Build docs
         run: pnpm docs:build
 
