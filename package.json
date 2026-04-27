@@ -1,6 +1,6 @@
 {
   "name": "ahacode",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "ahaCode — a local-first code snippets manager for developers (AGPL fork of massCode)",
   "author": {
     "name": "sinksmell",
