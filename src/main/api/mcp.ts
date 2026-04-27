@@ -50,6 +50,7 @@ async function handleToolsCall(
     const name = String(args.name ?? 'Untitled')
     const folderId = typeof args.folderId === 'number' ? args.folderId : null
     const contents = Array.isArray(args.contents) ? args.contents : []
+    const tags = Array.isArray(args.tags) ? args.tags : []
 
     if (!contents.length) {
       return createError(request.id, -32602, 'contents is required')
@@ -77,6 +78,23 @@ async function handleToolsCall(
         language: normalizeLanguage(String(content.language ?? 'plain_text')),
         value: String(content.value ?? ''),
       })
+    }
+
+    const existingTags = storage.tags.getTags()
+    const existingTagByName = new Map(
+      existingTags.map(tag => [tag.name.toLowerCase(), tag.id]),
+    )
+    for (const rawTagName of tags) {
+      const tagName = String(rawTagName).trim()
+      if (!tagName)
+        continue
+      const normalized = tagName.toLowerCase()
+      let tagId = existingTagByName.get(normalized)
+      if (!tagId) {
+        tagId = storage.tags.createTag(tagName).id
+        existingTagByName.set(normalized, tagId)
+      }
+      storage.snippets.addTagToSnippet(snippetId, tagId)
     }
 
     const snippet = storage.snippets.getSnippetById(snippetId)
@@ -167,6 +185,16 @@ export async function initMcpApi() {
                     description:
                       'Folder ID to place the snippet in. Pass null or omit to save to the inbox.',
                     examples: [null, 42],
+                  },
+                  tags: {
+                    type: 'array',
+                    items: { type: 'string' },
+                    description:
+                      'Tag names to attach to the snippet. Tags are created automatically if they do not exist yet.',
+                    examples: [
+                      ['go', 'grpc'],
+                      ['react', 'hooks'],
+                    ],
                   },
                   contents: {
                     type: 'array',
