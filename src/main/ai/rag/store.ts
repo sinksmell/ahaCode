@@ -41,7 +41,12 @@ function getDb(): DatabaseType {
   }
 
   const instance = new BetterSqlite3(getDbPath())
-  sqliteVec.load(instance)
+  // In packaged Electron, require.resolve returns a path inside .asar which
+  // the OS cannot dlopen. Rewrite to .asar.unpacked where the dylib is extracted.
+  const extPath = sqliteVec
+    .getLoadablePath()
+    .replace(/\.asar([/\\])/, '.asar.unpacked$1')
+  instance.loadExtension(extPath)
 
   instance.exec(`
     CREATE TABLE IF NOT EXISTS rag_chunks (

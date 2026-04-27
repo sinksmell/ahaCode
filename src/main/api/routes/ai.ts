@@ -9,6 +9,7 @@ import {
 } from '../../ai/rag/index'
 import { useStorage } from '../../storage'
 import { aiDTO } from '../dto/ai'
+import { normalizeLanguage } from '../normalizeLanguage'
 
 const app = new Elysia({ prefix: '/ai' })
 
@@ -26,7 +27,7 @@ app
       for (const content of body.contents) {
         storage.snippets.createSnippetContent(snippetId, {
           label: content.label,
-          language: content.language,
+          language: normalizeLanguage(content.language),
           value: content.value,
         })
       }

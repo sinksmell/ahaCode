@@ -4,6 +4,7 @@ import { queryRagIndex, upsertSnippetInRagIndex } from '../ai/rag/index'
 import { useStorage } from '../storage'
 import { store } from '../store'
 import { importEsm } from '../utils'
+import { normalizeLanguage } from './normalizeLanguage'
 
 interface JsonRpcRequest {
   id?: string | number | null
@@ -54,6 +55,17 @@ async function handleToolsCall(
       return createError(request.id, -32602, 'contents is required')
     }
 
+    const invalidIndex = contents.findIndex(
+      (c: any) => typeof c.value !== 'string',
+    )
+    if (invalidIndex !== -1) {
+      return createError(
+        request.id,
+        -32602,
+        `contents[${invalidIndex}].value is required (string). Did you mean to use "value" instead of "content"?`,
+      )
+    }
+
     const { id: snippetId } = storage.snippets.createSnippet({
       folderId,
       name,
@@ -62,14 +74,24 @@ async function handleToolsCall(
     for (const content of contents) {
       storage.snippets.createSnippetContent(snippetId, {
         label: String(content.label ?? 'main'),
-        language: String(content.language ?? 'text'),
+        language: normalizeLanguage(String(content.language ?? 'plain_text')),
         value: String(content.value ?? ''),
       })
     }
 
     const snippet = storage.snippets.getSnippetById(snippetId)
     if (snippet) {
-      await upsertSnippetInRagIndex(snippet)
+      const outcome = await upsertSnippetInRagIndex(snippet)
+      if (
+        outcome.reason === 'embed-error'
+        || outcome.reason === 'store-error'
+      ) {
+        return createError(
+          request.id,
+          -32603,
+          `RAG index failed (${outcome.reason}): ${outcome.error ?? 'unknown'}`,
+        )
+      }
     }
 
     return createResult(request.id, {
@@ -128,27 +150,129 @@ export async function initMcpApi() {
         return createResult(request.id, {
           tools: [
             {
-              description: 'Create snippet and append it to RAG index',
+              description:
+                'Save a code snippet to ahaCode and add it to the local RAG search index. Each snippet can have multiple content fragments (tabs). The snippet is immediately searchable via rag_query after ingestion.',
               inputSchema: {
-                properties: {
-                  contents: { type: 'array' },
-                  folderId: { type: ['number', 'null'] },
-                  name: { type: 'string' },
-                },
-                required: ['name', 'contents'],
                 type: 'object',
+                required: ['name', 'contents'],
+                properties: {
+                  name: {
+                    type: 'string',
+                    description:
+                      'Display name of the snippet shown in the sidebar.',
+                    examples: ['HTTP retry with backoff', 'Redis cache helper'],
+                  },
+                  folderId: {
+                    type: ['number', 'null'],
+                    description:
+                      'Folder ID to place the snippet in. Pass null or omit to save to the inbox.',
+                    examples: [null, 42],
+                  },
+                  contents: {
+                    type: 'array',
+                    description:
+                      'One or more code fragments (tabs) for this snippet. Each item MUST have "label", "language", and "value" — not "content", not "code", not "body".',
+                    minItems: 1,
+                    items: {
+                      type: 'object',
+                      required: ['label', 'language', 'value'],
+                      properties: {
+                        label: {
+                          type: 'string',
+                          description:
+                            'Tab label shown in the editor. Use short identifiers like "main", "test", "handler".',
+                          examples: ['main', 'test', 'handler'],
+                        },
+                        language: {
+                          type: 'string',
+                          description:
+                            'Language identifier for syntax highlighting. Common aliases are accepted and normalized: "go"→"golang", "js"→"javascript", "ts"→"typescript", "py"→"python", "rs"→"rust", "cpp"→"c_cpp", "sh"/"bash"→"sh", "yml"→"yaml".',
+                          examples: [
+                            'go',
+                            'typescript',
+                            'python',
+                            'rust',
+                            'sh',
+                          ],
+                        },
+                        value: {
+                          type: 'string',
+                          description:
+                            'The full source code or text body of this fragment. This field is called "value" — do NOT use "content", "code", or "body" as the key name.',
+                          examples: [
+                            'func main() {\n\tfmt.Println("hello")\n}',
+                          ],
+                        },
+                      },
+                      examples: [
+                        {
+                          label: 'main',
+                          language: 'go',
+                          value: 'func main() {\n\tfmt.Println("hello")\n}',
+                        },
+                        {
+                          label: 'handler',
+                          language: 'ts',
+                          value:
+                            'export async function handler(req: Request) {\n  return Response.json({ ok: true })\n}',
+                        },
+                      ],
+                    },
+                    examples: [
+                      [
+                        {
+                          label: 'main',
+                          language: 'go',
+                          value: 'func main() {}',
+                        },
+                      ],
+                    ],
+                  },
+                },
+                examples: [
+                  {
+                    name: 'HTTP retry with backoff',
+                    folderId: null,
+                    contents: [
+                      {
+                        label: 'main',
+                        language: 'go',
+                        value:
+                          'func withRetry(ctx context.Context, n int, fn func() error) error {\n\tfor i := range n {\n\t\tif err := fn(); err == nil { return nil }\n\t\ttime.Sleep(time.Duration(1<<i) * 100 * time.Millisecond)\n\t}\n\treturn fn()\n}',
+                      },
+                    ],
+                  },
+                ],
               },
               name: 'ingest_snippet',
             },
             {
-              description: 'Query local snippet RAG index',
+              description:
+                'Search the local RAG index for snippets semantically similar to the query. Returns ranked results with snippet name, language, and full source code. Use this to find relevant code before writing new implementations.',
               inputSchema: {
-                properties: {
-                  limit: { type: 'number' },
-                  query: { type: 'string' },
-                },
-                required: ['query'],
                 type: 'object',
+                required: ['query'],
+                properties: {
+                  query: {
+                    type: 'string',
+                    description:
+                      'Natural language or code description of what you are looking for.',
+                    examples: [
+                      'golang http retry',
+                      'react toggle hook',
+                      'redis cache read-through',
+                    ],
+                  },
+                  limit: {
+                    type: 'number',
+                    description:
+                      'Maximum number of results to return. Defaults to 8.',
+                    examples: [5, 8, 16],
+                  },
+                },
+                examples: [
+                  { query: 'database transaction rollback pattern', limit: 5 },
+                ],
               },
               name: 'rag_query',
             },
